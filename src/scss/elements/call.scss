@@ -1,0 +1,50 @@
+.call {
+  @extend %flexColumn;
+  align-items: flex-end;
+
+  &__link {
+    @extend %flexCenterBetween;
+    column-gap: 0.8rem;
+  }
+
+  &__icon {
+    @include sizes(2.8rem, 2.8rem);
+  }
+
+  &__link-txt {
+    @extend %text22;
+    color: $blackLight;
+  }
+
+  &__text {
+    @extend %text18;
+    color: $greyLight;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .call {
+    flex-direction: row;
+    column-gap: 5.4rem;
+
+    &__link {
+      column-gap: 1.2rem;
+    }
+
+    &__icon {
+      @include sizes(4rem, 4rem);
+    }
+
+    &__link-txt {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 100%;
+    }
+
+    &__text {
+      font-size: 2.8rem;
+      line-height: 150%;
+      color: $blackLight;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+%fullSize {
+  width: 100%;
+  height: 100%;
+}
+
+%hover {
+  transition: $transition;
+  cursor: pointer;
+}
+
+//-----Flex----------//
+%flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+%flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flexCenterBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%flexCenterEnd {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+%flexEndCenter {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+%flexCenterStart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+//-------------------------//
+
+//--------Texts----------//
+%text18 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+%text16 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+%text20 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+%text22 {
+  font-size: 2.2rem;
+  font-weight: 550;
+}
+
+%text23 {
+  font-size: 2.3rem;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+%text40 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: normal;
+}
+
+%h3 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+%h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 140%;
+}
+//----------------------//

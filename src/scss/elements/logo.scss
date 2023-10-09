@@ -1,0 +1,34 @@
+.logo {
+  @extend %flexCenterBetween;
+  column-gap: 1.6rem;
+
+  &__text {
+    @extend %flexColumn;
+    @extend %text20;
+    font-weight: 700;
+    color: $blackLight;
+    text-transform: uppercase;
+
+    span {
+      font-weight: 400;
+      color: $greyLight;
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .logo {
+    column-gap: 1.2rem;
+
+    &__text {
+      font-size: 2.8rem;
+      line-height: normal;
+
+      span {
+        font-size: 2.6rem;
+        line-height: 140%;
+        color: $blackLight;
+      }
+    }
+  }
+}

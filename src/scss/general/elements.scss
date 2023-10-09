@@ -1,0 +1,21 @@
+body {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+  &.menu-open {
+    overflow: hidden;
+
+    .menu {
+      top: 0%;
+    }
+
+    .header__burger {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .header__close {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
