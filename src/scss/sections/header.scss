@@ -9,6 +9,10 @@
   color: $blackLight;
   transition: $transition;
 
+  &.scroll {
+    background: $white;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;

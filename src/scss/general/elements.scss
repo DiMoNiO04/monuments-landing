@@ -19,3 +19,28 @@ body {
     }
   }
 }
+
+.wrapper {
+  @extend %flexColumn;
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  background: url('@img/bg/marble.png');
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.title {
+  @extend %h1;
+  margin-bottom: 4rem;
+  color: $blackLight;
+}
+
+@media screen and (max-width: 48em) {
+  .title {
+    margin-bottom: 8rem;
+    font-size: 6rem;
+    line-height: 140%;
+  }
+}

@@ -10,4 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
   closeMenu.addEventListener('click', () => {
     body.classList.remove('menu-open');
   });
+
+  const header = document.querySelector('.header');
+  window.onscroll = () => {
+    if (window.pageYOffset > 30) {
+      header.classList.add('scroll');
+    } else {
+      header.classList.remove('scroll');
+    }
+  };
 });

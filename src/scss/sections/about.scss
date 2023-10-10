@@ -1,0 +1,138 @@
+.about {
+  margin-top: 20rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    @include sizes(59.4rem, 59.4rem);
+    position: absolute;
+    background: url('@img/bg/about-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.5;
+    left: 0;
+    bottom: -3rem;
+  }
+
+  &__wrapper {
+    @extend %flexCenterBetween;
+    column-gap: 16.8rem;
+  }
+
+  &__container {
+    @extend %flexColumn;
+    align-items: center;
+  }
+
+  &__desc {
+    @extend %flexColumn;
+    row-gap: 3rem;
+    width: 76.6rem;
+    flex-shrink: 0;
+
+    p {
+      @extend %text18;
+      color: $black;
+    }
+  }
+
+  &__items {
+    @extend %flexCenterBetween;
+    flex-wrap: wrap;
+    column-gap: 11.7rem;
+    row-gap: 3.4rem;
+  }
+
+  &__item {
+    @extend %flexColumn;
+    align-items: center;
+    width: 33rem;
+  }
+
+  &__img {
+    @include sizes(10.5rem, 10.5rem);
+    margin-bottom: 1.6rem;
+  }
+
+  &__text-main {
+    color: $blackDark;
+    font-family: Gilroy, sans-serif;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+
+    span {
+      font-size: 4rem;
+    }
+  }
+
+  &__text-txt {
+    @extend %text18;
+    color: $greyDark;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .about {
+    &::before {
+      @include sizes(90rem, 90rem);
+      left: auto;
+      bottom: auto;
+      right: 3.2rem;
+      top: 32rem;
+    }
+
+    &__container {
+      align-items: flex-start;
+    }
+
+    &__wrapper {
+      flex-direction: column;
+      row-gap: 8rem;
+    }
+
+    &__desc {
+      width: 100%;
+      row-gap: 4rem;
+
+      p {
+        font-size: 2.9rem;
+        color: $blackLight;
+        line-height: 140%;
+      }
+    }
+
+    &__items {
+      row-gap: 4.8rem;
+    }
+
+    &__item {
+      flex-direction: row;
+      column-gap: 4rem;
+      width: 100%;
+    }
+
+    &__img {
+      margin-bottom: 0;
+      @include sizes(14rem, 14rem);
+      flex-shrink: 0;
+    }
+
+    &__text-main {
+      font-size: 3.2rem;
+      margin-bottom: 1.6rem;
+
+      span {
+        font-size: 4.2rem;
+        font-weight: 700;
+      }
+    }
+
+    &__text-txt {
+      font-size: 2.8rem;
+      line-height: 140%;
+    }
+  }
+}
