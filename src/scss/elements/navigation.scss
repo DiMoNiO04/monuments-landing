@@ -1,0 +1,43 @@
+.navigation {
+  &__buttons {
+    @extend %flexCenterBetween;
+    width: fit-content;
+    margin: 0 auto;
+    column-gap: 1.6rem;
+
+    button {
+      @include sizes(6rem, 6rem);
+      @extend %flexCenter;
+      background: $blackLight;
+      border-radius: 50%;
+
+      svg path {
+        fill: $white;
+      }
+
+      &.swiper-button-disabled {
+        background: #f6f6f6;
+
+        svg path {
+          fill: $blackLight;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .navigation {
+    &__buttons {
+      column-gap: 2.4rem;
+
+      button {
+        @include sizes(8.8rem, 8.8rem);
+
+        svg {
+          @include sizes(3.5rem, 3.5rem);
+        }
+      }
+    }
+  }
+}

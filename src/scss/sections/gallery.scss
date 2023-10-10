@@ -1,0 +1,86 @@
+.gallery {
+  .title {
+    margin: 0 auto 11.7rem auto;
+    display: block;
+    width: fit-content;
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  @media screen and (min-width: 48em) {
+    &__wrapper {
+      margin-left: -16rem;
+    }
+  }
+
+  &__slide {
+    @include sizes(78.4rem, 42rem);
+    transition: $transition;
+    cursor: pointer;
+    padding: 2rem;
+    @media screen and (min-width: 48em) {
+      opacity: 0.5;
+    }
+
+    &.swiper-slide-active {
+      border-radius: 30px;
+      border: 1px solid #e7e5e5;
+      background: #fff;
+      margin: 0 8rem 0 0;
+      @media screen and (min-width: 48em) {
+        transform: scale(1.1, 1.37);
+        opacity: 1;
+      }
+
+      .gallery__slide-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+
+    &.swiper-slide-prev {
+      margin: 0 8rem;
+    }
+  }
+
+  &__slide-img {
+    @extend %fullSize;
+    img {
+      height: 100%;
+      border-radius: 3rem;
+    }
+  }
+
+  &__buttons {
+    margin-top: 11.7rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .gallery {
+    .title {
+      margin-bottom: 8rem;
+    }
+
+    .swiper {
+      overflow: hidden;
+    }
+
+    &__buttons {
+      margin-top: 4.8rem;
+    }
+
+    &__slide {
+      height: 44rem;
+      &.swiper-slide-prev {
+        margin: 0;
+      }
+    }
+  }
+}
