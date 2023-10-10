@@ -47,7 +47,7 @@
     "nouislider": "latest",
     "prettier": "latest",
     "sass": "latest",
-    "swiper": "^10.3.0",
+    "swiper": "latest",
     "webp-converter": "latest",
     "webpack": "latest",
     "webpack-stream": "latest"
