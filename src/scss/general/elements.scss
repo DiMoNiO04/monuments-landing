@@ -33,7 +33,7 @@ body {
 
 .title {
   @extend %h1;
-  margin-bottom: 4rem;
+  margin-bottom: 4.4rem;
   color: $blackLight;
 }
 
@@ -42,5 +42,9 @@ body {
     margin-bottom: 8rem;
     font-size: 6rem;
     line-height: 140%;
+  }
+
+  .wrapper {
+    background: url('@img/bg/marble-bg-mobile.png');
   }
 }

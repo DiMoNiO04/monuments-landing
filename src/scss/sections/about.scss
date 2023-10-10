@@ -4,14 +4,14 @@
 
   &::before {
     content: '';
-    @include sizes(59.4rem, 59.4rem);
+    @include sizes(51.4rem, 61.4rem);
     position: absolute;
     background: url('@img/bg/about-bg.svg');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: 0.5;
-    left: 0;
+    opacity: 0.25;
+    left: -2rem;
     bottom: -3rem;
   }
 
@@ -23,6 +23,7 @@
   &__container {
     @extend %flexColumn;
     align-items: center;
+    width: 166.5rem;
   }
 
   &__desc {
@@ -40,14 +41,20 @@
   &__items {
     @extend %flexCenterBetween;
     flex-wrap: wrap;
-    column-gap: 11.7rem;
-    row-gap: 3.4rem;
+    row-gap: 3rem;
   }
 
   &__item {
     @extend %flexColumn;
     align-items: center;
-    width: 33rem;
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 32.5rem;
+    }
+    &:nth-child(2),
+    &:nth-child(4) {
+      width: 30rem;
+    }
   }
 
   &__img {
@@ -71,6 +78,7 @@
   &__text-txt {
     @extend %text18;
     color: $greyDark;
+    text-align: center;
   }
 }
 
@@ -86,6 +94,7 @@
 
     &__container {
       align-items: flex-start;
+      width: 100%;
     }
 
     &__wrapper {
@@ -114,6 +123,15 @@
       width: 100%;
     }
 
+    &__item {
+      @extend %flexColumn;
+      align-items: center;
+
+      &:nth-child(n) {
+        width: 100%;
+      }
+    }
+
     &__img {
       margin-bottom: 0;
       @include sizes(14rem, 14rem);
@@ -133,6 +151,7 @@
     &__text-txt {
       font-size: 2.8rem;
       line-height: 140%;
+      text-align: start;
     }
   }
 }
