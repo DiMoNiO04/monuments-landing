@@ -1175,6 +1175,8 @@ template {
   cursor: pointer;
 }
 
+.reviews__slide,
+.reviews__container,
 .materials__item,
 .materials__container,
 .privileges__item,
@@ -1219,6 +1221,12 @@ template {
   line-height: 160%;
 }
 
+.reviews__text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
 .projects__slide-text,
 .materials__txt,
 .privileges__text-wrap span,
@@ -1231,6 +1239,12 @@ template {
 .call__link-txt {
   font-size: 2.2rem;
   font-weight: 550;
+}
+
+.reviews__name {
+  font-size: 2.3rem;
+  font-weight: 400;
+  line-height: 140%;
 }
 
 .title {
@@ -1946,6 +1960,93 @@ section {
   margin-top: 11.7rem;
 }
 
+.reviews__container {
+  align-items: center;
+  position: relative;
+}
+
+.reviews__container::before {
+  content: "";
+  width: 26.8rem;
+  height: 25.1rem;
+  position: absolute;
+  background: url("@img/bg/reviews-lg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  left: 4rem;
+  top: -7rem;
+}
+
+.reviews .swiper {
+  overflow: visible;
+}
+
+.reviews__name {
+  color: #181818;
+}
+
+.reviews__text {
+  color: #181818;
+  position: relative;
+  overflow: auto;
+  max-height: 21rem;
+}
+
+.reviews__text::-webkit-scrollbar {
+  display: none;
+}
+
+.reviews__slide {
+  width: 40.2rem;
+  height: 45.5rem;
+  align-items: center;
+  padding: 6rem 4rem;
+  row-gap: 6rem;
+  border-radius: 2.7rem;
+  border: 0.17rem solid rgb(245, 245, 245);
+  background: linear-gradient(0deg, #fff 0%, #fff 100%), linear-gradient(165deg, #f8f8f8 1.32%, #f4f4f4 103.54%);
+  box-shadow: 2rem 3rem 7rem 0 rgba(80, 81, 98, 0.1);
+  transition: all 0.4s ease;
+}
+
+.reviews__slide::before,
+.reviews__slide::after {
+  content: "";
+  width: 4.3rem;
+  height: 4.9rem;
+  position: absolute;
+  background: url("@img/bg/reviews-sm.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reviews__slide::before {
+  left: 3rem;
+  top: 12rem;
+}
+
+.reviews__slide::after {
+  transform: rotate(180deg);
+  right: 4rem;
+  bottom: 4rem;
+}
+
+.reviews__slider {
+  width: 143rem;
+}
+
+.reviews__buttons {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+
+.reviews__buttons button {
+  position: relative;
+  z-index: 2;
+}
+
 @media screen and (min-width: 48em) {
   .gallery__wrapper {
     margin-left: -16rem;
@@ -1971,6 +2072,49 @@ section {
   .projects__slide.swiper-slide-active {
     transform: scale(1.1, 1.37);
     opacity: 1;
+  }
+
+  .reviews__slide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .reviews__slide.swiper-slide-active {
+    transform: scale(1.12, 1.12);
+    border-radius: 3rem;
+    border-width: 2px;
+    row-gap: 6.8rem;
+    padding: 6.8rem 5rem;
+  }
+
+  .reviews__slide.swiper-slide-active::before {
+    left: 4rem;
+    top: 13.5rem;
+  }
+
+  .reviews__slide.swiper-slide-active::after {
+    right: 5rem;
+  }
+
+  .reviews__slide.swiper-slide-active .reviews__name {
+    font-size: 2.6rem;
+  }
+
+  .reviews__slide.swiper-slide-active .reviews__text {
+    font-size: 1.6rem;
+  }
+
+  .reviews__slide.swiper-slide-active .reviews__text::before,
+  .reviews__slide.swiper-slide-active .reviews__text::after {
+    width: 4.5rem;
+    height: 5.1rem;
+  }
+
+  .reviews__slide.swiper-slide-prev,
+  .reviews__slide.swiper-slide-next,
+  .reviews__slide.swiper-slide-active {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
@@ -2443,6 +2587,59 @@ section {
     font-size: 2.8rem;
     opacity: 1;
     visibility: visible;
+  }
+
+  .reviews__container::before {
+    width: 21rem;
+    height: 20.2rem;
+    left: -2.6rem;
+    bottom: auto;
+    top: -6rem;
+  }
+
+  .reviews__name {
+    font-size: 3.6rem;
+  }
+
+  .reviews__text {
+    max-height: 40rem;
+    font-size: 2.8rem;
+  }
+
+  .reviews__slide {
+    height: 76rem;
+    padding: 10.4rem 6rem;
+    row-gap: 8rem;
+    border-radius: 6rem;
+    border: 0.4rem solid rgb(245, 245, 245);
+  }
+
+  .reviews__slide::before,
+  .reviews__slide::after {
+    width: 7rem;
+    height: 8rem;
+  }
+
+  .reviews__slide::before {
+    left: 4rem;
+    top: 18rem;
+  }
+
+  .reviews__slide::after {
+    right: 6rem;
+    bottom: 4rem;
+  }
+
+  .reviews__slider {
+    width: 100%;
+  }
+
+  .reviews__buttons {
+    width: -moz-fit-content;
+    width: fit-content;
+    position: relative;
+    top: auto;
+    margin-top: 4.8rem;
   }
 }
 

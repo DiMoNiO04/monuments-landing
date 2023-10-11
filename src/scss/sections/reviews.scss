@@ -1,0 +1,189 @@
+.reviews {
+  &__container {
+    @extend %flexColumn;
+    align-items: center;
+    position: relative;
+
+    &::before {
+      content: '';
+      @include sizes(26.8rem, 25.1rem);
+      position: absolute;
+      background: url('@img/bg/reviews-lg.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+      left: 4rem;
+      top: -7rem;
+    }
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  &__name {
+    @extend %text23;
+    color: $blackDark;
+  }
+
+  &__text {
+    @extend %text15;
+    color: $blackDark;
+    position: relative;
+    overflow: auto;
+    max-height: 21rem;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__slide {
+    @extend %flexColumn;
+    @include sizes(40.2rem, 45.5rem);
+    align-items: center;
+    padding: 6rem 4rem;
+    row-gap: 6rem;
+    border-radius: 2.7rem;
+    border: 0.17rem solid rgba(245, 245, 245, 1);
+    background: linear-gradient(0deg, #fff 0%, #fff 100%), linear-gradient(165deg, #f8f8f8 1.32%, #f4f4f4 103.54%);
+    box-shadow: 2rem 3rem 7rem 0 rgba(80, 81, 98, 0.1);
+    transition: $transition;
+
+    @media screen and (min-width: 48em) {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      @include sizes(4.3rem, 4.9rem);
+      position: absolute;
+      background: url('@img/bg/reviews-sm.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      left: 3rem;
+      top: 12rem;
+    }
+
+    &::after {
+      transform: rotate(180deg);
+      right: 4rem;
+      bottom: 4rem;
+    }
+
+    @media screen and (min-width: 48em) {
+      &.swiper-slide-active {
+        transform: scale(1.12, 1.12);
+        border-radius: 3rem;
+        border-width: 2px;
+        row-gap: 6.8rem;
+        padding: 6.8rem 5rem;
+
+        &::before {
+          left: 4rem;
+          top: 13.5rem;
+        }
+
+        &::after {
+          right: 5rem;
+        }
+
+        .reviews__name {
+          font-size: 2.6rem;
+        }
+
+        .reviews__text {
+          font-size: 1.6rem;
+
+          &::before,
+          &::after {
+            @include sizes(4.5rem, 5.1rem);
+          }
+        }
+      }
+
+      &.swiper-slide-prev,
+      &.swiper-slide-next,
+      &.swiper-slide-active {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__slider {
+    width: 143rem;
+  }
+
+  &__buttons {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+
+    button {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .reviews {
+    &__container {
+      &::before {
+        @include sizes(21rem, 20.2rem);
+        left: -2.6rem;
+        bottom: auto;
+        top: -6rem;
+      }
+    }
+
+    &__name {
+      font-size: 3.6rem;
+    }
+
+    &__text {
+      max-height: 40rem;
+      font-size: 2.8rem;
+    }
+
+    &__slide {
+      height: 76rem;
+      padding: 10.4rem 6rem;
+      row-gap: 8rem;
+      border-radius: 6rem;
+      border: 0.4rem solid rgba(245, 245, 245, 1);
+
+      &::before,
+      &::after {
+        @include sizes(7rem, 8rem);
+      }
+
+      &::before {
+        left: 4rem;
+        top: 18rem;
+      }
+
+      &::after {
+        right: 6rem;
+        bottom: 4rem;
+      }
+    }
+
+    &__slider {
+      width: 100%;
+    }
+
+    &__buttons {
+      width: fit-content;
+      position: relative;
+      top: auto;
+      margin-top: 4.8rem;
+    }
+  }
+}

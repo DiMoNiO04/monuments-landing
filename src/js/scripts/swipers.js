@@ -115,14 +115,62 @@ const initProjectsSwiper = () => {
   });
 };
 
+const initReviewsSwiper = () => {
+  new Swiper('.reviews__slider', {
+    modules: [Navigation],
+    speed: 1000,
+    slidesPerView: 1,
+    spaceBetween: 40,
+    observer: true,
+    loop: false,
+    observeParents: true,
+    initialSlide: 0,
+    slideToClickedSlide: true,
+
+    navigation: {
+      prevEl: '.reviews .swiper__arrows-prev',
+      nextEl: '.reviews .swiper__arrows-next',
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 90,
+        loop: true,
+      },
+    },
+
+    on: {
+      afterInit: (swiper) => {
+        if (!window.matchMedia('(max-width: 768px)').matches) {
+          swiper.update();
+        }
+      },
+      slideChange: (swiper) => {
+        if (!window.matchMedia('(max-width: 768px)').matches) {
+          swiper.update();
+        }
+        // if(swiper.activeIndex === 0) {
+        // document.querySelector('.gallery__wrapper').style.marginLeft = '0'
+        // } else {
+        // document.querySelector('.gallery__wrapper').style.marginLeft = '-16rem'
+        // }
+      },
+    },
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   initMaterialSlider();
   initGallerySwiper();
   initProjectsSwiper();
+  initReviewsSwiper();
 });
 
 window.addEventListener('resize', () => {
   initMaterialSlider();
   initGallerySwiper();
   initProjectsSwiper();
+  initReviewsSwiper();
 });
