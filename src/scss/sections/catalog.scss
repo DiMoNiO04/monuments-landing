@@ -1,0 +1,163 @@
+.catalog {
+  &__container {
+    @extend %flexColumn;
+    align-items: center;
+  }
+
+  &__slider {
+    width: 176rem;
+  }
+
+  &__buttons {
+    margin-top: 3.2rem;
+  }
+
+  &__btns {
+    @extend %flexCenterBetween;
+    column-gap: 3.2rem;
+    padding: 1.4rem 3.2rem;
+    border-radius: 3rem;
+    border: 2px solid rgba(255, 255, 255, 0);
+    background: #f6f6f6;
+    backdrop-filter: blur(2.1rem);
+    margin-bottom: 4rem;
+    transition: $transition;
+
+    button {
+      @extend %text18;
+      color: $greyLight;
+      position: relative;
+
+      &:hover {
+        color: $blackLight;
+      }
+
+      &.active {
+        color: $blackLight;
+        &:after {
+          content: '';
+          @include sizes(0.4rem, 0.4rem);
+          background-color: $blackLight;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          left: calc(50% - 0.4rem / 2);
+        }
+      }
+    }
+  }
+
+  &__slide {
+    @include sizes(41.7rem, 44.3rem);
+    border-radius: 3rem;
+    border: 1px solid #e7e5e5;
+    background: $white;
+    padding: 2.4rem;
+  }
+
+  &__img {
+    @include sizes(36.9rem, 31.8rem);
+    border-radius: 3rem;
+    position: relative;
+
+    img {
+      @extend %fullSize;
+      border-radius: 3rem;
+    }
+  }
+
+  &__text {
+    margin-top: 1.7rem;
+    @extend %text20;
+    color: $blackLight;
+  }
+
+  &__plush {
+    @extend %text18;
+    border-radius: 3rem;
+    background: $white;
+    box-shadow: 1.2rem 2rem 6rem 0 rgba(74, 75, 99, 0.15);
+    color: $greyLight;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    position: absolute;
+    left: 1.2rem;
+    bottom: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .catalog {
+    &__slider {
+      width: 100%;
+    }
+
+    &__buttons {
+      margin-top: 4.8rem;
+    }
+
+    &__btns {
+      width: 100%;
+      column-gap: 4.8rem;
+      padding: 2.4rem 4.8rem;
+      border-radius: 6rem;
+      backdrop-filter: blur(4.2rem);
+      margin: 0 3.2rem 8rem 3.2rem;
+      overflow: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      button {
+        font-size: 2.8rem;
+        flex-shrink: 0;
+
+        &:hover {
+          color: $greyLight;
+        }
+
+        &.active {
+          color: $blackLight;
+
+          &:after {
+            @include sizes(0.8rem, 0.8rem);
+            left: calc(50% - 0.8rem / 2);
+          }
+        }
+      }
+    }
+
+    &__slide {
+      @include sizes(68.6rem, 62.8rem);
+      border-radius: 6rem;
+      padding: 2.4rem;
+    }
+
+    &__img {
+      @include sizes(64rem, 48rem);
+      border-radius: 6rem;
+
+      img {
+        border-radius: 6rem;
+      }
+    }
+
+    &__text {
+      margin-top: 1.7rem;
+      font-size: 2.8rem;
+    }
+
+    &__plush {
+      font-size: 2.8rem;
+      border-radius: 6rem;
+      padding: 0.8rem 1.6rem;
+      left: 1.6rem;
+      bottom: 1.6rem;
+      min-width: 17.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
