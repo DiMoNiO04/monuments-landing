@@ -51,5 +51,8 @@
     "webp-converter": "latest",
     "webpack": "latest",
     "webpack-stream": "latest"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
   }
 }
