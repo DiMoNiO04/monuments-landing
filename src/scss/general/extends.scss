@@ -43,6 +43,18 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+%flexEndBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+%flexStartBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 //-------------------------//
 
 //--------Texts----------//

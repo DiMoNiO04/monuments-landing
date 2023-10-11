@@ -17,6 +17,10 @@
   }
 }
 
+.btn-arrow {
+  @include sizes(2.4rem, 2.4rem);
+}
+
 @media screen and (max-width: 48em) {
   .btn {
     height: 9.8rem;

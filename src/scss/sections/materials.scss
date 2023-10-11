@@ -26,8 +26,6 @@
 
   &__img {
     @include sizes(34rem, 34rem);
-    background-color: yellowgreen;
-    border-radius: 50%;
   }
 
   &__txt {
@@ -56,7 +54,6 @@
     &__items {
       @extend %flexCenterBetween;
       column-gap: 0;
-      // padding: 0 3.2rem;
       width: 75rem;
     }
 
@@ -66,12 +63,10 @@
 
     &__img {
       @include sizes(44rem, 44rem);
-      background-color: yellowgreen;
     }
 
     &__txt {
       font-size: 3.6rem;
-      color: $blackLight;
     }
   }
 }

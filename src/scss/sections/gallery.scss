@@ -1,6 +1,6 @@
 .gallery {
   .title {
-    margin: 0 auto 11.7rem auto;
+    margin: 0 auto 12.4rem auto;
     display: block;
     width: fit-content;
   }
@@ -11,7 +11,7 @@
 
   @media screen and (min-width: 48em) {
     &__wrapper {
-      margin-left: -16rem;
+      margin-left: -7rem;
     }
   }
 
@@ -19,7 +19,6 @@
     @include sizes(78.4rem, 42rem);
     transition: $transition;
     cursor: pointer;
-    padding: 2rem;
     @media screen and (min-width: 48em) {
       opacity: 0.5;
     }
@@ -28,7 +27,8 @@
       border-radius: 3rem;
       border: 1px solid #e7e5e5;
       background: #fff;
-      margin: 0 8rem 0 0;
+      margin: 0 7rem 0 0;
+      padding: 2rem;
       @media screen and (min-width: 48em) {
         transform: scale(1.1, 1.37);
         opacity: 1;
@@ -45,7 +45,7 @@
     }
 
     &.swiper-slide-prev {
-      margin: 0 8rem;
+      margin: 0 7rem 0 0;
     }
   }
 

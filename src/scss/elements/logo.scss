@@ -5,8 +5,7 @@
   &__text {
     @extend %flexColumn;
     @extend %text20;
-    font-weight: 700;
-    color: $blackLight;
+    font-weight: 550;
     text-transform: uppercase;
 
     span {

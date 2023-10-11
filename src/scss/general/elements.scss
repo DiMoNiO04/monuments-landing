@@ -20,6 +20,10 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   @extend %flexColumn;
   position: relative;

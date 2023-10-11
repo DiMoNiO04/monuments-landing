@@ -11,14 +11,14 @@
       background: $blackLight;
       border-radius: 50%;
 
-      svg path {
+      svg {
         fill: $white;
       }
 
       &.swiper-button-disabled {
         background: #f6f6f6;
 
-        svg path {
+        svg {
           fill: $blackLight;
         }
       }

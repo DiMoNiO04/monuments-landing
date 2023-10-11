@@ -1,8 +1,6 @@
 .footer {
   &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    @extend %flexEndBetween;
     padding-top: 3.2rem;
     padding-bottom: 4rem;
     position: relative;

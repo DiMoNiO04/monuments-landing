@@ -6,7 +6,6 @@
   left: 0;
   right: 0;
   width: 100%;
-  color: $blackLight;
   transition: $transition;
 
   &.scroll {
@@ -14,9 +13,7 @@
   }
 
   &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    @extend %flexStartBetween;
     padding-top: 3.2rem;
     padding-bottom: 4rem;
     position: relative;

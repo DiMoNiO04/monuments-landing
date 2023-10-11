@@ -1,5 +1,5 @@
 .main {
-  margin-top: 17.6rem;
+  padding-top: 13.6rem;
 
   &__container {
     display: flex;
@@ -9,6 +9,7 @@
   &__desc {
     @extend %flexColumn;
     flex: 0 0 79.4rem;
+    margin-left: 4.4rem;
   }
 
   &__slider {
@@ -31,7 +32,7 @@
     display: flex;
     align-items: center;
     width: fit-content;
-    column-gap: 2.4rem;
+    column-gap: 1.8rem;
     justify-content: center;
     padding-bottom: 2rem;
 
@@ -58,10 +59,9 @@
   }
 
   &__title {
-    color: $blackLight;
     font-family: HelveticaNeueCyr, sans-serif;
     font-size: 7rem;
-    font-weight: 700;
+    font-weight: 550;
     line-height: 110%;
     margin-bottom: 2rem;
   }
@@ -82,17 +82,15 @@
   backdrop-filter: blur(0.3rem);
   padding: 3.2rem;
   position: absolute;
-  top: 43rem;
-  left: 59rem;
+  top: 42.5rem;
+  left: 63rem;
   z-index: 10;
   width: 52rem;
 
   &__txt {
     @extend %text18;
-    color: $blackLight;
     position: relative;
     padding-top: 2.4rem;
-
     border-top: 1px solid $white;
   }
 
@@ -104,8 +102,7 @@
 
   &__desc {
     @extend %text20;
-    color: $blackLight;
-    font-weight: 700;
+    font-weight: 550;
   }
 
   &__icons {
@@ -114,8 +111,6 @@
 
   &__icon {
     @include sizes(5rem, 5rem);
-    border-radius: 50%;
-    background-color: aqua;
 
     &:nth-child(2) {
       position: relative;
@@ -131,9 +126,7 @@
 
 .circle {
   @include sizes(19.5rem, 19.5rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flexCenter;
   border-radius: 50%;
   background: transparent;
   border: 1px solid $white;
@@ -146,16 +139,14 @@
     @include sizes(16.6rem, 16.6rem);
     background-color: $white;
     border-radius: 50%;
-    padding: 4rem 2rem;
+    padding: 2rem 1rem 4rem 2rem;
     @extend %flexColumn;
     align-items: center;
     justify-content: center;
   }
 
   &__year {
-    color: $blackLight;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 160%;
 
     span {
@@ -165,10 +156,8 @@
   }
 
   &__txt {
-    color: $blackLight;
     text-align: center;
     font-size: 1.4rem;
-    font-weight: 400;
     line-height: 160%;
   }
 }

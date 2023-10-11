@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.min.css?_v=20231011205928" />
+  <link rel="stylesheet" href="./css/style.min.css?_v=20231012001617" />
   <title>Союз каменных мастерских</title>
 </head>
 
@@ -21,17 +21,17 @@
     <div class="header__menu menu">
       <nav class="menu__body">
         <ul class="menu__list">
-          <a href="#" class="menu__link">Каталог</a>
-          <a href="#" class="menu__link">Материалы</a>
-          <a href="#" class="menu__link">О компании</a>
-          <a href="#" class="menu__link">Отзывы</a>
-          <a href="#" class="menu__link">Преимущества</a>
-          <a href="#" class="menu__link">Контакты</a>
+          <a href="#catalog" class="menu__link">Каталог</a>
+          <a href="#materials" class="menu__link">Материалы</a>
+          <a href="#about" class="menu__link">О компании</a>
+          <a href="#reviews" class="menu__link">Отзывы</a>
+          <a href="#advantages" class="menu__link">Преимущества</a>
+          <a href="#contacts" class="menu__link">Контакты</a>
         </ul>
       </nav>
       <div class="header__call call">
         <a href="tel:74951550535" class="call__link">
-          <img src="img/icons/phone.svg" alt="" aria-hidden="true" class="call__icon" />
+          <img src="img/icons/icons.svg#phone" alt="" aria-hidden="true" class="call__icon" />
           <span class="call__link-txt">+7 (495) 155-05-35</span>
         </a>
         <span class="call__text">с 9:00 до 19:00</span>
@@ -48,26 +48,26 @@
     </button>
   </div>
 </header>
- <main class="main contacts">
+ <main>
   <section class="main">
   <div class="container main__container">
     <div class="main__desc desc">
       <div class="desc__subtitle">Гранитные и мраморные породы</div>
       <div class="desc__title">Изделия из натурального камня</div>
       <div class="desc__txt">Cтолешницы, подоконники, ступени, балясины, стеновые панели, каминные порталы</div>
-      <a href="#" class="btn"> Оставить заявку </a>
+      <a href="#application" class="btn"> Оставить заявку </a>
     </div>
     <div class="main__mater mater">
       <div class="mater__top">
         <div class="mater__icons">
           <div class="mater__icon">
-            <img src="" alt="" />
+            <picture><source srcset="img/materials/mramor-sm.webp" type="image/webp"><img src="img/materials/mramor-sm.png" alt="" /></picture>
           </div>
           <div class="mater__icon">
-            <img src="" alt="" />
+            <picture><source srcset="img/materials/oniks-sm.webp" type="image/webp"><img src="img/materials/oniks-sm.png" alt="" /></picture>
           </div>
           <div class="mater__icon">
-            <img src="" alt="" />
+            <picture><source srcset="img/materials/granit-sm.webp" type="image/webp"><img src="img/materials/granit-sm.png" alt="" /></picture>
           </div>
         </div>
         <div class="mater__desc">100+ материалов</div>
@@ -98,7 +98,7 @@
     </div>
   </div>
 </section>
- <section class="about">
+ <section class="about" id="about">
   <div class="container about__container">
     <div class="title">О нас</div>
     <div class="about__wrapper">
@@ -124,7 +124,7 @@
       <div class="about__items">
         <div class="about__item">
           <div class="about__img">
-            <img src="img/icons/disain.svg" alt="" />
+            <img src="img/icons/icons.svg#disain" alt="" />
           </div>
           <div class="about__text">
             <div class="about__text-main"><span>1000+</span> вариантов дизайна</div>
@@ -133,7 +133,7 @@
         </div>
         <div class="about__item">
           <div class="about__img">
-            <img src="img/icons/client.svg" alt="" />
+            <img src="img/icons/icons.svg#client" alt="" />
           </div>
           <div class="about__text">
             <div class="about__text-main"><span>100%</span> довольных клиентов</div>
@@ -142,7 +142,7 @@
         </div>
         <div class="about__item">
           <div class="about__img">
-            <img src="img/icons/projects.svg" alt="" />
+            <img src="img/icons/icons.svg#projects" alt="" />
           </div>
           <div class="about__text">
             <div class="about__text-main"><span>1000+</span> успешных проектов</div>
@@ -151,7 +151,7 @@
         </div>
         <div class="about__item">
           <div class="about__img">
-            <img src="img/icons/ustanovka.svg" alt="" />
+            <img src="img/icons/icons.svg#ustanovka" alt="" />
           </div>
           <div class="about__text">
             <div class="about__text-main"><span>100%</span> точность установки</div>
@@ -162,7 +162,7 @@
     </div>
   </div>
 </section>
- <section class="catalog">
+ <section class="catalog" id="catalog">
   <div class="container catalog__container">
     <div class="title">Каталог</div>
     <div class="catalog__btns">
@@ -233,19 +233,13 @@
       </div>
       <div class="catalog__buttons navigation__buttons">
         <button type="button" class="swiper__arrows-prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="2.4rem" height="2.4rem" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M13.1938 17.2782C13.5846 17.6754 14.2247 17.6765 14.6169 17.2807L15.3049 16.5864C15.6902 16.1976 15.6913 15.5713 15.3074 15.1811L12.8686 12.7027C12.4851 12.313 12.4857 11.6876 12.87 11.2986L15.3071 8.8314C15.6914 8.44243 15.692 7.81697 15.3085 7.42726L14.6168 6.72437C14.2251 6.32621 13.5831 6.32621 13.1913 6.72437L8.69017 11.2986C8.30721 11.6878 8.30721 12.3122 8.69017 12.7014L13.1938 17.2782Z"
-              fill="none"
-            />
+          <svg class="btn-arrow arrow-left">
+            <use xlink:href="img/icons/icons.svg#arrow-left"></use>
           </svg>
         </button>
         <button type="button" class="swiper__arrows-next">
-          <svg xmlns="http://www.w3.org/2000/svg" width="2.4rem" height="2.4rem" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M10.8062 17.2782C10.4154 17.6754 9.77534 17.6765 9.38313 17.2807L8.6951 16.5864C8.3098 16.1976 8.30869 15.5713 8.69261 15.1811L11.1314 12.7027C11.5149 12.313 11.5143 11.6876 11.13 11.2986L8.69286 8.8314C8.30863 8.44243 8.30802 7.81697 8.69151 7.42726L9.38316 6.72437C9.77495 6.32621 10.4169 6.32621 10.8087 6.72437L15.3098 11.2986C15.6928 11.6878 15.6928 12.3122 15.3098 12.7014L10.8062 17.2782Z"
-              fill="none"
-            />
+          <svg class="btn-arrow arrow-right">
+            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
           </svg>
         </button>
       </div>
@@ -253,7 +247,7 @@
   </div>
 </section>
 
-  <section class="materials">
+  <section class="materials" id="materials">
   <div class="container materials__container">
     <div class="title">Материалы</div>
     <div class="materials__text">
@@ -264,19 +258,19 @@
       <div class="materials__items swiper-wrapper">
         <div class="swiper-slide materials__item">
           <div class="materials__img">
-            <img src="" alt="" />
+            <picture><source srcset="img/materials/mramor-lg.webp" type="image/webp"><img src="img/materials/mramor-lg.png" alt="" /></picture>
           </div>
           <div class="materials__txt">МРАМОР</div>
         </div>
         <div class="swiper-slide materials__item">
           <div class="materials__img">
-            <img src="" alt="" />
+            <picture><source srcset="img/materials/oniks-lg.webp" type="image/webp"><img src="img/materials/oniks-lg.png" alt="" /></picture>
           </div>
           <div class="materials__txt">ОНИКС</div>
         </div>
         <div class="swiper-slide materials__item">
           <div class="materials__img">
-            <img src="" alt="" />
+            <picture><source srcset="img/materials/granit-lg.webp" type="image/webp"><img src="img/materials/granit-lg.png" alt="" /></picture>
           </div>
           <div class="materials__txt">ГРАНИТ</div>
         </div>
@@ -342,19 +336,13 @@
       </div>
       <div class="gallery__buttons navigation__buttons">
         <button type="button" class="swiper__arrows-prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="2.4rem" height="2.4rem" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M13.1938 17.2782C13.5846 17.6754 14.2247 17.6765 14.6169 17.2807L15.3049 16.5864C15.6902 16.1976 15.6913 15.5713 15.3074 15.1811L12.8686 12.7027C12.4851 12.313 12.4857 11.6876 12.87 11.2986L15.3071 8.8314C15.6914 8.44243 15.692 7.81697 15.3085 7.42726L14.6168 6.72437C14.2251 6.32621 13.5831 6.32621 13.1913 6.72437L8.69017 11.2986C8.30721 11.6878 8.30721 12.3122 8.69017 12.7014L13.1938 17.2782Z"
-              fill="none"
-            />
+          <svg class="btn-arrow arrow-left">
+            <use xlink:href="img/icons/icons.svg#arrow-left"></use>
           </svg>
         </button>
         <button type="button" class="swiper__arrows-next">
-          <svg xmlns="http://www.w3.org/2000/svg" width="2.4rem" height="2.4rem" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M10.8062 17.2782C10.4154 17.6754 9.77534 17.6765 9.38313 17.2807L8.6951 16.5864C8.3098 16.1976 8.30869 15.5713 8.69261 15.1811L11.1314 12.7027C11.5149 12.313 11.5143 11.6876 11.13 11.2986L8.69286 8.8314C8.30863 8.44243 8.30802 7.81697 8.69151 7.42726L9.38316 6.72437C9.77495 6.32621 10.4169 6.32621 10.8087 6.72437L15.3098 11.2986C15.6928 11.6878 15.6928 12.3122 15.3098 12.7014L10.8062 17.2782Z"
-              fill="none"
-            />
+          <svg class="btn-arrow arrow-right">
+            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
           </svg>
         </button>
       </div>
@@ -412,26 +400,20 @@
       </div>
       <div class="projects__buttons navigation__buttons">
         <button type="button" class="swiper__arrows-prev">
-          <svg xmlns="http://www.w3.org/2000/svg" width="2.4rem" height="2.4rem" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M13.1938 17.2782C13.5846 17.6754 14.2247 17.6765 14.6169 17.2807L15.3049 16.5864C15.6902 16.1976 15.6913 15.5713 15.3074 15.1811L12.8686 12.7027C12.4851 12.313 12.4857 11.6876 12.87 11.2986L15.3071 8.8314C15.6914 8.44243 15.692 7.81697 15.3085 7.42726L14.6168 6.72437C14.2251 6.32621 13.5831 6.32621 13.1913 6.72437L8.69017 11.2986C8.30721 11.6878 8.30721 12.3122 8.69017 12.7014L13.1938 17.2782Z"
-              fill="none"
-            />
+          <svg class="btn-arrow arrow-left">
+            <use xlink:href="img/icons/icons.svg#arrow-left"></use>
           </svg>
         </button>
         <button type="button" class="swiper__arrows-next">
-          <svg xmlns="http://www.w3.org/2000/svg" width="2.4rem" height="2.4rem" viewBox="0 0 24 24" fill="none">
-            <path
-              d="M10.8062 17.2782C10.4154 17.6754 9.77534 17.6765 9.38313 17.2807L8.6951 16.5864C8.3098 16.1976 8.30869 15.5713 8.69261 15.1811L11.1314 12.7027C11.5149 12.313 11.5143 11.6876 11.13 11.2986L8.69286 8.8314C8.30863 8.44243 8.30802 7.81697 8.69151 7.42726L9.38316 6.72437C9.77495 6.32621 10.4169 6.32621 10.8087 6.72437L15.3098 11.2986C15.6928 11.6878 15.6928 12.3122 15.3098 12.7014L10.8062 17.2782Z"
-              fill="none"
-            />
+          <svg class="btn-arrow arrow-right">
+            <use xlink:href="img/icons/icons.svg#arrow-right"></use>
           </svg>
         </button>
       </div>
     </div>
   </div>
 </section>
- <section class="privileges">
+ <section class="privileges" id="advantages">
   <div class="container privileges__container">
     <div class="title">Наши преимущества</div>
     <div class="privileges__items">
@@ -439,21 +421,21 @@
         <p class="privileges__text --desc">Мы тщательно подбираем каждую деталь для высокого качества продукции</p>
         <p class="privileges__text --mob">Добыча и обработка на современном оборудовании</p>
         <div class="privileges__icon">
-          <img src="img/icons/privilegas/diamond.svg" alt="" />
+          <img src="img/icons/icons.svg#diamond" alt="" />
         </div>
       </div>
       <div class="privileges__item">
         <p class="privileges__text --desc">Дизайны от современных и смелых решений до классических и элегантных</p>
         <p class="privileges__text --mob">Отличное качество гранитной и мраморной продукции</p>
         <div class="privileges__icon">
-          <img src="img/icons/privilegas/designs.svg" alt="" />
+          <img src="img/icons/icons.svg#designs" alt="" />
         </div>
       </div>
       <div class="privileges__item">
         <p class="privileges__text --desc">Предлагаем индивидуальный подход к каждому проекту</p>
         <p class="privileges__text --mob">Возможность выполнять большие объемы работ</p>
         <div class="privileges__icon">
-          <img src="img/icons/privilegas/approach.svg" alt="" />
+          <img src="img/icons/icons.svg#approach" alt="" />
         </div>
       </div>
       <div class="privileges__item">
@@ -462,14 +444,14 @@
         </p>
         <p class="privileges__text --mob">Собственная система логистики и быстрая доставка</p>
         <div class="privileges__icon">
-          <img src="img/icons/privilegas/installation.svg" alt="" />
+          <img src="img/icons/icons.svg#installation" alt="" />
         </div>
       </div>
       <div class="privileges__item">
         <p class="privileges__text --desc">Мы предлагаем вам максимальный выбор изделий</p>
         <p class="privileges__text --mob">Широкий ассортимент изделий из гранита и мрамора</p>
         <div class="privileges__icon">
-          <img src="img/icons/privilegas/choice.svg" alt="" />
+          <img src="img/icons/icons.svg#choice" alt="" />
         </div>
       </div>
     </div>
@@ -479,7 +461,7 @@
     </div>
   </div>
 </section>
- <section class="reviews">
+ <section class="reviews" id="reviews">
   <div class="container reviews__container">
     <div class="title">Отзывы</div>
     <div class="swiper reviews__slider">
@@ -536,26 +518,20 @@
     </div>
     <div class="reviews__buttons navigation__buttons">
       <button type="button" class="swiper__arrows-prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="2.4rem" height="2.4rem" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M13.1938 17.2782C13.5846 17.6754 14.2247 17.6765 14.6169 17.2807L15.3049 16.5864C15.6902 16.1976 15.6913 15.5713 15.3074 15.1811L12.8686 12.7027C12.4851 12.313 12.4857 11.6876 12.87 11.2986L15.3071 8.8314C15.6914 8.44243 15.692 7.81697 15.3085 7.42726L14.6168 6.72437C14.2251 6.32621 13.5831 6.32621 13.1913 6.72437L8.69017 11.2986C8.30721 11.6878 8.30721 12.3122 8.69017 12.7014L13.1938 17.2782Z"
-            fill="none"
-          />
+        <svg class="btn-arrow arrow-left">
+          <use xlink:href="img/icons/icons.svg#arrow-left"></use>
         </svg>
       </button>
       <button type="button" class="swiper__arrows-next">
-        <svg xmlns="http://www.w3.org/2000/svg" width="2.4rem" height="2.4rem" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M10.8062 17.2782C10.4154 17.6754 9.77534 17.6765 9.38313 17.2807L8.6951 16.5864C8.3098 16.1976 8.30869 15.5713 8.69261 15.1811L11.1314 12.7027C11.5149 12.313 11.5143 11.6876 11.13 11.2986L8.69286 8.8314C8.30863 8.44243 8.30802 7.81697 8.69151 7.42726L9.38316 6.72437C9.77495 6.32621 10.4169 6.32621 10.8087 6.72437L15.3098 11.2986C15.6928 11.6878 15.6928 12.3122 15.3098 12.7014L10.8062 17.2782Z"
-            fill="none"
-          />
+        <svg class="btn-arrow arrow-right">
+          <use xlink:href="img/icons/icons.svg#arrow-right"></use>
         </svg>
       </button>
     </div>
   </div>
 </section>
 
-  <section class="application">
+  <section class="application" id="application">
   <div class="container application__container">
     <div class="application__form-block">
       <form name="application" action="#" method="#" class="application__form">
@@ -580,7 +556,7 @@
     </div>
   </div>
 </section>
- <section class="contacts__map map-contacts">
+ <section class="contacts__map map-contacts" id="contacts">
   <div class="map-contacts__container container">
     <span class="map-contacts__title h2">контакты</span>
     <div class="map-contacts__wrap">
@@ -615,17 +591,17 @@
     <div class="footer__menu menu">
       <nav class="menu__body">
         <ul class="menu__list">
-          <a href="#" class="menu__link">Каталог</a>
-          <a href="#" class="menu__link">Материалы</a>
-          <a href="#" class="menu__link">О компании</a>
-          <a href="#" class="menu__link">Отзывы</a>
-          <a href="#" class="menu__link">Преимущества</a>
-          <a href="#" class="menu__link">Контакты</a>
+          <a href="#catalog" class="menu__link">Каталог</a>
+          <a href="#materials" class="menu__link">Материалы</a>
+          <a href="#about" class="menu__link">О компании</a>
+          <a href="#reviews" class="menu__link">Отзывы</a>
+          <a href="#advantages" class="menu__link">Преимущества</a>
+          <a href="#contacts" class="menu__link">Контакты</a>
         </ul>
       </nav>
       <div class="footer__call call">
         <a href="tel:74951550535" class="call__link">
-          <img src="img/icons/phone.svg" alt="" aria-hidden="true" class="call__icon" />
+          <img src="img/icons/icons.svg#phone" alt="" aria-hidden="true" class="call__icon" />
           <span class="call__link-txt">+7 (495) 155-05-35</span>
         </a>
         <span class="call__text">с 9:00 до 19:00</span>
@@ -636,7 +612,7 @@
 
     </div>
   </body>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ&_v=20231011205928>&lang=ru_RU"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20231011205928"></script>
-  <script src="./js/app.min.js?_v=20231011205928"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ&_v=20231012001617>&lang=ru_RU"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20231012001617"></script>
+  <script src="./js/app.min.js?_v=20231012001617"></script>
 </html>

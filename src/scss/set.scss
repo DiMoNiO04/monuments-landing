@@ -25,8 +25,9 @@ body {
   padding: 0;
   height: 100%;
   font-size: 1.8rem;
-  color: $grey; // цвет по умолчанию текста по сайту
+  color: $blackLight; // цвет по умолчанию текста по сайту
   background-color: #ffffff;
+  font-weight: 400;
   // opacity: 0;
 
   // .loaded & {
@@ -129,7 +130,7 @@ input[type='number'] {
 }
 
 section {
-  margin-bottom: 18rem;
+  padding-top: 17.8rem;
 }
 
 @media (max-width: 48em) {

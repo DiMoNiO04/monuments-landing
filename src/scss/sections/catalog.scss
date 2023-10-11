@@ -15,9 +15,9 @@
   &__btns {
     @extend %flexCenterBetween;
     column-gap: 3.2rem;
-    padding: 1.4rem 3.2rem;
+    padding: 1rem 3.2rem 1.4rem 3.2rem;
     border-radius: 3rem;
-    border: 2px solid rgba(255, 255, 255, 0);
+    border: 0.2rem solid rgba(245, 245, 245, 1);
     background: #f6f6f6;
     backdrop-filter: blur(2.1rem);
     margin-bottom: 4rem;
@@ -57,23 +57,23 @@
 
   &__img {
     @include sizes(36.9rem, 31.8rem);
-    border-radius: 3rem;
+    border-radius: 2rem;
     position: relative;
 
     img {
       @extend %fullSize;
-      border-radius: 3rem;
+      border-radius: 2rem;
     }
   }
 
   &__text {
     margin-top: 1.7rem;
     @extend %text20;
-    color: $blackLight;
   }
 
   &__plush {
     @extend %text18;
+    @extend %flexCenter;
     border-radius: 3rem;
     background: $white;
     box-shadow: 1.2rem 2rem 6rem 0 rgba(74, 75, 99, 0.15);
@@ -82,7 +82,7 @@
     width: fit-content;
     position: absolute;
     left: 1.2rem;
-    bottom: 1.2rem;
+    bottom: 1rem;
   }
 }
 
@@ -104,6 +104,7 @@
       backdrop-filter: blur(4.2rem);
       margin: 0 3.2rem 8rem 3.2rem;
       overflow: scroll;
+      border-width: 0.4rem;
 
       &::-webkit-scrollbar {
         display: none;
@@ -155,9 +156,6 @@
       left: 1.6rem;
       bottom: 1.6rem;
       min-width: 17.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   }
 }
