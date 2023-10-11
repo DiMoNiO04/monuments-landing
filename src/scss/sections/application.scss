@@ -1,0 +1,162 @@
+.application {
+  &__container {
+    @include sizes(176rem, 78rem);
+    background-image: url('../img/application/application.jpg');
+    background-size: cover;
+    border-radius: 3rem;
+    position: relative;
+  }
+
+  &__form-block {
+    @include sizes(81.2rem, 76.9rem);
+    box-shadow: 2rem 3rem 7rem 0 rgba(80, 81, 98, 0.1);
+    border-radius: 3rem;
+    position: absolute;
+    right: 0;
+    top: -2rem;
+    background-image: url('../img/application/form.svg');
+    background-size: cover;
+    border-radius: 3rem;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  &__form {
+    padding: 12.4rem 13.4rem 12.4rem 10.8rem;
+  }
+
+  &__text {
+    @extend %text20;
+    color: $black;
+    margin-bottom: 4.6rem;
+    max-width: 40rem;
+  }
+
+  &__inputs {
+    @extend %flexColumn;
+    row-gap: 1.2rem;
+    margin-bottom: 4.6rem;
+
+    input {
+      @extend %text18;
+      width: 100%;
+      color: $blackLight;
+      padding: 1.8rem 2rem;
+      border-radius: 1rem;
+      border: 1px solid #c1c1c1;
+
+      &::placeholder {
+        color: $greyDark;
+      }
+    }
+  }
+
+  &__txt {
+    color: $black;
+    font-family: Roboto, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 130%;
+    max-width: 45rem;
+  }
+
+  &__btn {
+    display: inline-flex;
+    height: 5.6rem;
+    padding: 1.7rem 6rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 3rem;
+    background: $blackLight;
+    color: $white;
+    @extend %text18;
+    position: absolute;
+    bottom: 2rem;
+    right: 14rem;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .application {
+    &__container {
+      @include sizes(68.6rem, 68.8rem);
+      background-image: url('../img/application/application-mob.jpg');
+      background-size: cover;
+      border-radius: 6rem;
+    }
+
+    &__form-block {
+      @include sizes(62.2rem, 101rem);
+      box-shadow: 2rem 3rem 7rem 0 rgba(80, 81, 98, 0.1);
+      border-radius: 3rem;
+      position: absolute;
+      right: 0;
+      top: -2rem;
+      background-image: url('../img/application/form.svg');
+      background-size: cover;
+      border-radius: 3rem;
+    }
+
+    .title {
+      margin: 0;
+    }
+
+    &__form {
+      padding: 12.4rem 13.4rem 12.4rem 10.8rem;
+    }
+
+    &__text {
+      @extend %text20;
+      color: $black;
+      margin-bottom: 4.6rem;
+      max-width: 40rem;
+    }
+
+    &__inputs {
+      @extend %flexColumn;
+      row-gap: 1.2rem;
+      margin-bottom: 4.6rem;
+
+      input {
+        @extend %text18;
+        width: 100%;
+        color: $blackLight;
+        padding: 1.8rem 2rem;
+        border-radius: 1rem;
+        border: 1px solid #c1c1c1;
+
+        &::placeholder {
+          color: $greyDark;
+        }
+      }
+    }
+
+    &__txt {
+      color: $black;
+      font-family: Roboto, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 130%;
+      max-width: 45rem;
+    }
+
+    &__btn {
+      display: inline-flex;
+      height: 5.6rem;
+      padding: 1.7rem 6rem;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      border-radius: 3rem;
+      background: $blackLight;
+      color: $white;
+      @extend %text18;
+      position: absolute;
+      bottom: 2rem;
+      right: 14rem;
+    }
+  }
+}
