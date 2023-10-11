@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 let materialsSlider = null;
 
@@ -13,9 +13,9 @@ const initMaterialSlider = () => {
       initialSlide: 1,
       spaceBetween: 40,
       centeredSlides: true,
-      speed: 1500,
+      speed: 1000,
       autoplay: {
-        delay: 4000,
+        delay: 3000,
         disableOnInteraction: false,
       },
     });
@@ -168,12 +168,33 @@ const initCatalogSwiper = () => {
   });
 };
 
+const initMainSwiper = () => {
+  new Swiper('.main__slider', {
+    modules: [Pagination, Autoplay],
+    slidesPerView: 1,
+    spaceBetween: 30,
+    observer: true,
+    loop: true,
+    observeParents: true,
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.main__pagination',
+      clickable: true,
+    },
+  });
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   initMaterialSlider();
   initGallerySwiper();
   initProjectsSwiper();
   initReviewsSwiper();
   initCatalogSwiper();
+  initMainSwiper();
 });
 
 window.addEventListener('resize', () => {
@@ -182,4 +203,5 @@ window.addEventListener('resize', () => {
   initProjectsSwiper();
   initReviewsSwiper();
   initCatalogSwiper();
+  initMainSwiper();
 });

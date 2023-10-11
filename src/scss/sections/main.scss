@@ -1,0 +1,294 @@
+.main {
+  margin-top: 17.6rem;
+
+  &__container {
+    display: flex;
+    position: relative;
+  }
+
+  &__desc {
+    @extend %flexColumn;
+    flex: 0 0 79.4rem;
+  }
+
+  &__slider {
+    position: relative;
+    padding-bottom: 6rem;
+  }
+
+  &__slide {
+    @include sizes(91.8rem, 70rem);
+    border-radius: 3rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__pagination {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    column-gap: 2.4rem;
+    justify-content: center;
+    padding-bottom: 2rem;
+
+    span {
+      @include sizes(1.2rem, 1.2rem);
+      background: $white;
+      box-shadow: 0.3rem 0.6rem 1.3rem rgba(74, 75, 99, 0.2);
+      opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: $blackLight;
+    }
+  }
+}
+
+.desc {
+  margin-top: 11.6rem;
+
+  &__subtitle {
+    @extend %text18;
+    color: $greyLight;
+    margin-bottom: 1.2rem;
+  }
+
+  &__title {
+    color: $blackLight;
+    font-family: HelveticaNeueCyr, sans-serif;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 2rem;
+  }
+
+  &__txt {
+    @extend %h3;
+    max-width: 47rem;
+    margin-bottom: 6.4rem;
+  }
+}
+
+.mater {
+  border-radius: 3rem;
+  border: 0.2rem solid $white;
+
+  background: linear-gradient(154deg, rgba(255, 255, 255, 0.4) 16.19%, rgba(239, 239, 239, 0.68) 93.33%);
+  box-shadow: -2rem 0 15rem 0 rgba(80, 81, 98, 0.12);
+  backdrop-filter: blur(0.3rem);
+  padding: 3.2rem;
+  position: absolute;
+  top: 43rem;
+  left: 59rem;
+  z-index: 10;
+  width: 52rem;
+
+  &__txt {
+    @extend %text18;
+    color: $blackLight;
+    position: relative;
+    padding-top: 2.4rem;
+
+    border-top: 1px solid $white;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.4rem;
+  }
+
+  &__desc {
+    @extend %text20;
+    color: $blackLight;
+    font-weight: 700;
+  }
+
+  &__icons {
+    display: flex;
+  }
+
+  &__icon {
+    @include sizes(5rem, 5rem);
+    border-radius: 50%;
+    background-color: aqua;
+
+    &:nth-child(2) {
+      position: relative;
+      left: -1.2rem;
+    }
+
+    &:nth-child(3) {
+      position: relative;
+      left: -2.4rem;
+    }
+  }
+}
+
+.circle {
+  @include sizes(19.5rem, 19.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid $white;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2;
+
+  &__block {
+    @include sizes(16.6rem, 16.6rem);
+    background-color: $white;
+    border-radius: 50%;
+    padding: 4rem 2rem;
+    @extend %flexColumn;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__year {
+    color: $blackLight;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 160%;
+
+    span {
+      font-size: 3.9rem;
+      line-height: 140%;
+    }
+  }
+
+  &__txt {
+    color: $blackLight;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .main {
+    margin-top: 17rem;
+
+    &__desc {
+      flex: 0 0 100%;
+    }
+
+    &__container {
+      flex-direction: column-reverse;
+    }
+
+    &__slider {
+      width: 100%;
+      padding: 9rem 0 0;
+      margin-bottom: 4rem;
+    }
+
+    &__slide {
+      @include sizes(68.2rem, 55rem);
+      border-radius: 6rem;
+    }
+
+    &__pagination {
+      column-gap: 0.8rem;
+      padding-bottom: 0;
+
+      span {
+        @include sizes(1.6rem, 1.6rem);
+        box-shadow: 0.4rem 0.6rem 1.8rem rgba(74, 75, 99, 0.2);
+      }
+    }
+  }
+
+  .desc {
+    margin-top: 0;
+
+    &__subtitle {
+      font-size: 2.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    &__title {
+      font-size: 6rem;
+      margin-bottom: 4rem;
+    }
+
+    &__txt {
+      max-width: 100%;
+      margin-bottom: 8rem;
+      font-size: 3.6rem;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  .mater {
+    backdrop-filter: none;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+
+    &__txt {
+      display: none;
+    }
+
+    &__top {
+      margin-bottom: 4rem;
+    }
+
+    &__desc {
+      font-size: 3.6rem;
+    }
+
+    &__icon {
+      @include sizes(8rem, 8rem);
+      &:nth-child(2) {
+        left: -2.2rem;
+      }
+
+      &:nth-child(3) {
+        left: -4.2rem;
+      }
+    }
+  }
+
+  .circle {
+    @include sizes(23rem, 23rem);
+    top: 0;
+    right: 0;
+    border: 0;
+
+    &__block {
+      @include sizes(23rem, 23rem);
+      padding: 6rem 2.2rem;
+      border: 0.2rem solid rgba(245, 245, 245, 1);
+    }
+
+    &__year {
+      font-size: 2rem;
+
+      span {
+        font-size: 4.6rem;
+      }
+    }
+
+    &__txt {
+      font-size: 2rem;
+    }
+  }
+}

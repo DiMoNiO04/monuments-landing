@@ -1,0 +1,28 @@
+.btn {
+  display: inline-flex;
+  height: 5.6rem;
+  padding: 1.7rem 6rem;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 3rem;
+  background: $blackLight;
+  color: $white;
+  @extend %text18;
+  width: 26rem;
+  transition: $transition;
+
+  &:hover {
+    background: $black;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .btn {
+    height: 9.8rem;
+    padding: 2.4rem 10rem;
+    border-radius: 6rem;
+    font-size: 2.8rem;
+    width: 26rem;
+  }
+}
