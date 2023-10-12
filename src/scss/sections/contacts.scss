@@ -1,3 +1,13 @@
+.contacts {
+  margin-bottom: 18rem;
+
+  &__container {
+    @extend %flexColumn;
+    align-items: center;
+    position: relative;
+  }
+}
+
 .map-contacts {
   // @extend %paddingTop;
 
@@ -148,7 +158,13 @@
   }
 }
 
-#map {
+.map {
+  @include sizes(176rem, 70rem);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  $transition: $transition;
+  border-radius: 2rem;
   position: relative;
   overflow: hidden;
 
@@ -191,14 +207,15 @@
   .ymaps-2-1-79-inner-panes {
     overflow: visible;
   }
-}
 
-.ymaps-2-1-79-controls-pane *,
-.ymaps-2-1-79-searchpanel-pane * {
-  display: flex;
+  .ymaps-2-1-79-map,
+  .ymaps-2-1-79-inner-panes {
+    border-radius: 3rem;
+  }
 }
 
 .map-panel {
+  @include showDesc();
   padding: 4.3rem 2.4rem 2.4rem 2.4rem;
   display: flex;
   flex-direction: column;
@@ -208,77 +225,52 @@
   text-transform: uppercase;
   background-color: #ffffff;
   filter: drop-shadow(1.2rem 2rem 6rem rgba(74, 75, 99, 0.15));
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  right: 8rem;
+  top: 28rem;
+  z-index: 2;
+  transition: $transition;
 
-  @media (max-width: 48em) {
-    padding: 7rem 3.2rem 3.2rem 3.2rem;
-    // min-height: 69.4rem;
+  &.active {
+    opacity: 1;
+    visibility: visible;
   }
-
-  // .map-panel__heading
 
   &__heading {
     margin-bottom: 1.6rem;
     font-size: 2.6rem;
     line-height: 140%;
-
-    @media (max-width: 48em) {
-      font-size: 3.2rem;
-    }
   }
-
-  // .map-panel__list
 
   &__list {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     row-gap: 0.4rem;
-
-    @media (max-width: 48em) {
-      margin-bottom: 2.8rem;
-      row-gap: 1.2rem;
-    }
   }
-
-  // .map-panel__list-item
 
   &__list-item {
     line-height: 160%;
     font-size: 1.6rem;
-
-    @media (max-width: 48em) {
-      font-size: 2.4rem;
-    }
   }
-
-  // .map-panel__list-heading
 
   &__list-heading {
     white-space: nowrap;
   }
 
-  // .map-panel__list-txt
-
   &__list-txt {
     color: $grey;
   }
 
-  // .map-panel__image-wrap
-
   &__image-wrap {
     height: 15.4rem;
-
-    @media (max-width: 48em) {
-      height: 22rem;
-    }
   }
-
-  // .map-panel__image
 
   &__image {
   }
-
-  // .map-panel__icon-wrap
 
   &__icon-wrap {
     position: absolute;
@@ -287,18 +279,71 @@
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
-
-    // filter: drop-shadow(1.2rem 2rem 6rem rgba(74, 75, 99, 0.15));
-    @media (max-width: 48em) {
-      width: 12rem;
-      height: 12rem;
-    }
+    background-color: $white;
+    border-radius: 50%;
+    @extend %flexCenter;
   }
 
-  // .map-panel__icon
-
   &__icon {
-    height: 100%;
+    @include sizes(5rem, 5rem);
     object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .map {
+    @include sizes(68.6rem, 97.8rem);
+  }
+
+  .map-panel {
+    z-index: 12;
+    transform: translateY(-5rem);
+    @include showMob();
+    @include sizes(68.6rem, 86rem);
+    background-color: transparent;
+    padding: 10rem 4.8rem 4.8rem 4.8rem;
+    right: 3.2rem;
+    top: 30%;
+    position: fixed;
+    transition: $transition;
+
+    &__bg {
+      background: url('@img/icons/icons.svg#map-panel-mob') no-repeat center;
+      @include sizes(68.6rem, 86rem);
+      position: absolute;
+      z-index: -1;
+      background-size: cover;
+      top: 0;
+      right: 0;
+    }
+
+    &__heading {
+      font-size: 3.6rem;
+      margin-bottom: 2.4rem;
+    }
+
+    &__list {
+      margin-bottom: 2.8rem;
+      row-gap: 1.2rem;
+    }
+
+    &__list-item {
+      font-size: 2.8rem;
+    }
+
+    &__image-wrap {
+      @include sizes(59rem, 30rem);
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &__btn-close {
+      @include sizes(10.2rem, 10.2rem);
+      position: absolute;
+      right: 1rem;
+      top: -3rem;
+    }
   }
 }

@@ -1,20 +1,72 @@
-<section class="contacts__map map-contacts" id="contacts">
-  <div class="map-contacts__container container">
-    <span class="map-contacts__title h2">контакты</span>
-    <div class="map-contacts__wrap">
-      <div class="map-contacts__links">
-        <div class="map-contacts__link-wrap">
-          <a href="#" title="Центральный офис" class="map-contacts__btn btn"
-            ><span class="btn__text">Центральный офис</span></a
-          >
-        </div>
-        <div class="map-contacts__link-wrap">
-          <a href="#" title="Выставка СКМ" class="map-contacts__btn btn btn_ol"
-            ><span class="btn__text">Выставка СКМ</span></a
-          >
-        </div>
+<section class="contacts" id="contacts">
+  <div class="container contacts__container">
+    <div class="title">Контакты</div>
+    <div class="map" id="map"></div>
+    <div class="map-panel" data-map-content="ofic">
+      <div class="map-panel__bg --mob">
+        <img src="@img/icons/icons.svg##map-panel-mob" alt="" />
       </div>
-      <div id="map" class="map-contacts__inner"></div>
+      <span class="map-panel__heading">Офис</span>
+      <ul class="map-panel__list">
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">телефон:</span>
+          <a href="tel:+74951550535" class="map-panel__list-txt">+7 (495) 155-05-35</a>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">e-mail:</span>
+          <a href="mailto:info@pamyatnik.ru" class="map-panel__list-txt">info@pamyatnik.ru</a>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">адрес:</span>
+          <span class="map-panel__list-txt">ул. Адмирала Корнилова, 50, стр. 1</span>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">часы работы:</span>
+          <span class="map-panel__list-txt">ежедневно, с 9:00 до 19:00</span>
+        </li>
+      </ul>
+      <div class="map-panel__image-wrap">
+        <img class="map-panel__image" src="@img/map/map-img.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="map-panel__icon-wrap --desc">
+        <img class="map-panel__icon" src="@img/icons/icons.svg#location-map" alt="" aria-hidden="true" />
+      </div>
+      <button type="button" class="map-panel__btn-close --mob">
+        <img src="@img/icons/icons.svg#close" alt="close" title="Закрыть" />
+      </button>
+    </div>
+    <div class="map-panel" data-map-content="main-ofic">
+      <div class="map-panel__bg --mob">
+        <img src="@img/icons/icons.svg##map-panel-mob" alt="" />
+      </div>
+      <span class="map-panel__heading">Центральный офис</span>
+      <ul class="map-panel__list">
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">телефон:</span>
+          <a href="tel:+74951550535" class="map-panel__list-txt">+7 (495) 155-05-35</a>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">e-mail:</span>
+          <a href="mailto:info@pamyatnik.ru" class="map-panel__list-txt">info@pamyatnik.ru</a>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">адрес:</span>
+          <span class="map-panel__list-txt">ул. Адмирала Корнилова, 50, стр. 1</span>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">часы работы:</span>
+          <span class="map-panel__list-txt">ежедневно, с 9:00 до 19:00</span>
+        </li>
+      </ul>
+      <div class="map-panel__image-wrap">
+        <img class="map-panel__image" src="@img/map/map-img.jpg" alt="" aria-hidden="true" />
+      </div>
+      <div class="map-panel__icon-wrap --desc">
+        <img class="map-panel__icon" src="@img/icons/icons.svg#location-map" alt="" aria-hidden="true" />
+      </div>
+      <button type="button" class="map-panel__btn-close --mob">
+        <img src="@img/icons/icons.svg#close" alt="close" title="Закрыть" />
+      </button>
     </div>
   </div>
 </section>

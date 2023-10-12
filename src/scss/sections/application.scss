@@ -1,5 +1,9 @@
 .application {
   &__container {
+    position: relative;
+  }
+
+  &__img {
     @include sizes(176rem, 78rem);
     background-image: url('@img/application/application.jpg');
     background-size: cover;
@@ -8,15 +12,13 @@
   }
 
   &__form-block {
-    @include sizes(81.2rem, 76.9rem);
-    box-shadow: 2rem 3rem 7rem 0 rgba(80, 81, 98, 0.1);
+    @include sizes(67.2rem, 67.8rem);
     border-radius: 3rem;
     position: absolute;
-    right: 0;
-    top: -2rem;
+    right: 6.3rem;
+    top: 1.4rem;
     background-image: url('@img/icons/icons.svg#application');
     background-size: cover;
-    border-radius: 3rem;
   }
 
   .title {
@@ -24,7 +26,7 @@
   }
 
   &__form {
-    padding: 12.4rem 13.4rem 12.4rem 10.8rem;
+    padding: 10rem 5.4rem 8.4rem 5.4rem;
   }
 
   &__text {
@@ -61,41 +63,29 @@
   }
 
   &__btn {
-    display: inline-flex;
-    height: 5.6rem;
-    padding: 1.7rem 6rem;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 3rem;
-    background: $blackLight;
-    color: $white;
-    @extend %text18;
     position: absolute;
-    bottom: 2rem;
-    right: 14rem;
+    bottom: -2.5rem;
+    right: 5rem;
+    width: 21rem;
   }
 }
 
 @media screen and (max-width: 48em) {
   .application {
-    &__container {
+    &__img {
       @include sizes(68.6rem, 68.8rem);
-      background-image: url('../img/application/application-mob.jpg');
+      background-image: url('@img/application/application-mob.jpg');
       background-size: cover;
       border-radius: 6rem;
     }
 
     &__form-block {
-      @include sizes(62.2rem, 101rem);
-      box-shadow: 2rem 3rem 7rem 0 rgba(80, 81, 98, 0.1);
-      border-radius: 3rem;
-      position: absolute;
-      right: 0;
-      top: -2rem;
-      background-image: url('../img/application/form.svg');
+      @include sizes(115%, 101rem);
+      position: relative;
+      left: -12rem;
+      background-image: url('@img/icons/icons.svg#form-mob');
       background-size: cover;
-      border-radius: 3rem;
+      transform: translateY(-25rem);
     }
 
     .title {
@@ -103,56 +93,38 @@
     }
 
     &__form {
-      padding: 12.4rem 13.4rem 12.4rem 10.8rem;
+      padding: 4rem 4.8rem 12.4rem 20.6rem;
     }
 
     &__text {
-      @extend %text20;
-      color: $black;
-      margin-bottom: 4.6rem;
-      max-width: 40rem;
+      margin-bottom: 8rem;
+      max-width: 100%;
+      font-size: 2.9rem;
     }
 
     &__inputs {
-      @extend %flexColumn;
-      row-gap: 1.2rem;
-      margin-bottom: 4.6rem;
+      row-gap: 3.4rem;
+      margin-bottom: 8rem;
 
       input {
-        @extend %text18;
-        width: 100%;
-        padding: 1.8rem 2rem;
-        border-radius: 1rem;
+        padding: 2.4rem 4rem;
+        border-radius: 2rem;
+        font-size: 2.8rem;
         border-width: 0.2rem;
-
-        &::placeholder {
-          color: $greyDark;
-        }
       }
     }
 
     &__txt {
-      color: $black;
-      font-family: Roboto, sans-serif;
-      font-size: 1.4rem;
-      line-height: 130%;
-      max-width: 45rem;
+      font-size: 2.4rem;
+      max-width: 100%;
+      color: $greyLight;
     }
 
     &__btn {
-      display: inline-flex;
-      height: 5.6rem;
-      padding: 1.7rem 6rem;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-      border-radius: 3rem;
-      background: $blackLight;
-      color: $white;
-      @extend %text18;
       position: absolute;
-      bottom: 2rem;
-      right: 14rem;
+      bottom: -5rem;
+      right: 6.6rem;
+      width: 38rem;
     }
   }
 }

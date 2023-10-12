@@ -84,7 +84,7 @@
   position: absolute;
   top: 42.5rem;
   left: 63rem;
-  z-index: 10;
+  z-index: 2;
   width: 52rem;
 
   &__txt {
@@ -165,6 +165,7 @@
 @media screen and (max-width: 48em) {
   .main {
     margin-top: 17rem;
+    padding: 0;
 
     &__desc {
       flex: 0 0 100%;

@@ -3,11 +3,12 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.min.css?_v=20231012001617" />
+  <link rel="stylesheet" href="./css/style.min.css?_v=20231012095428" />
   <title>Союз каменных мастерских</title>
 </head>
 
   <body>
+    <div class="overflow-wrap"></div>
     <div class="wrapper">
       <header class="header">
   <div class="container header__container">
@@ -278,7 +279,80 @@
     </div>
   </div>
 </section>
-  <section class="gallery">
+ <section class="production">
+  <div class="container production__container">
+    <div class="title">Производство</div>
+    <div class="swiper production__slider">
+      <div class="swiper-wrapper production__wrapper">
+        <div class="swiper-slide production__slide">
+          <div class="production__circle">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#manuf-design"></use>
+            </svg>
+          </div>
+          <div class="production__text">
+            <div class="production__tit">01 / Дизайн и консультация</div>
+            <div class="production__txt">
+              Мы предлагаем профессиональную консультацию и помощь в выборе дизайна, материалов и стиля изделий
+            </div>
+          </div>
+          <div class="production__img-active">
+            <img src="img/icons/icons.svg#manuf-active-design" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide production__slide">
+          <div class="production__circle">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#manuf-preparation"></use>
+            </svg>
+          </div>
+          <div class="production__text">
+            <div class="production__tit">02 / Подготовка материалов</div>
+            <div class="production__txt">
+              Наша компания использует только высококачественные и экологически чистые материалы
+            </div>
+          </div>
+          <div class="production__img-active">
+            <img src="img/icons/icons.svg#manuf-active-preparation" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide production__slide">
+          <div class="production__circle">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#manuf-treatment"></use>
+            </svg>
+          </div>
+          <div class="production__text">
+            <div class="production__tit">03 / Обработка, изготовление</div>
+            <div class="production__txt">
+              Мы используем современное оборудование и технологии для точной и аккуратной обработки
+            </div>
+          </div>
+          <div class="production__img-active">
+            <img src="img/icons/icons.svg#manuf-active-treatment" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide production__slide">
+          <div class="production__circle">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#manuf-assembly"></use>
+            </svg>
+          </div>
+          <div class="production__text">
+            <div class="production__tit">04 / Сборка и монтаж</div>
+            <div class="production__txt">
+              Процесс установки и крепления происходит с высокой точностью и профессионализмом
+            </div>
+          </div>
+          <div class="production__img-active">
+            <img src="img/icons/icons.svg#manuf-active-assembly" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="gallery">
   <div class="container gallery__container">
     <div class="title">Галерея</div>
     <div class="swiper gallery__slider">
@@ -461,6 +535,33 @@
     </div>
   </div>
 </section>
+
+  <section class="application" id="application">
+  <div class="container application__container">
+    <div class="application__img"></div>
+    <div class="application__form-block">
+      <form name="application" action="#" method="#" class="application__form">
+        <div class="title">Оставить заявку</div>
+        <div class="application__text">Оставьте ваши контактные данные и мы свяжемся с вами в ближайшее время</div>
+        <div class="application__inputs">
+          <div class="application__input">
+            <input type="text" placeholder="Имя" />
+          </div>
+          <div class="application__input">
+            <input type="tel" placeholder="Номер телефона" />
+          </div>
+          <div class="application__input">
+            <input type="email" placeholder="Email" />
+          </div>
+        </div>
+        <div class="application__txt">
+          Нажимая кнопку «Отправить», я даю свое согласие на обработку моих данных на условиях соглашения
+        </div>
+        <button type="submit" form="application" class="btn application__btn">Отправить</button>
+      </form>
+    </div>
+  </div>
+</section>
  <section class="reviews" id="reviews">
   <div class="container reviews__container">
     <div class="title">Отзывы</div>
@@ -530,49 +631,75 @@
     </div>
   </div>
 </section>
-
-  <section class="application" id="application">
-  <div class="container application__container">
-    <div class="application__form-block">
-      <form name="application" action="#" method="#" class="application__form">
-        <div class="title">Оставить заявку</div>
-        <div class="application__text">Оставьте ваши контактные данные и мы свяжемся с вами в ближайшее время</div>
-        <div class="application__inputs">
-          <div class="application__input">
-            <input type="text" placeholder="Имя" />
-          </div>
-          <div class="application__input">
-            <input type="tel" placeholder="Номер телефона" />
-          </div>
-          <div class="application__input">
-            <input type="email" placeholder="Email" />
-          </div>
-        </div>
-        <div class="application__txt">
-          Нажимая кнопку «Отправить», я даю свое согласие на обработку моих данных на условиях соглашения
-        </div>
-        <button type="submit" form="application" class="application__btn">Отправить</button>
-      </form>
-    </div>
-  </div>
-</section>
- <section class="contacts__map map-contacts" id="contacts">
-  <div class="map-contacts__container container">
-    <span class="map-contacts__title h2">контакты</span>
-    <div class="map-contacts__wrap">
-      <div class="map-contacts__links">
-        <div class="map-contacts__link-wrap">
-          <a href="#" title="Центральный офис" class="map-contacts__btn btn"
-            ><span class="btn__text">Центральный офис</span></a
-          >
-        </div>
-        <div class="map-contacts__link-wrap">
-          <a href="#" title="Выставка СКМ" class="map-contacts__btn btn btn_ol"
-            ><span class="btn__text">Выставка СКМ</span></a
-          >
-        </div>
+ <section class="contacts" id="contacts">
+  <div class="container contacts__container">
+    <div class="title">Контакты</div>
+    <div class="map" id="map"></div>
+    <div class="map-panel" data-map-content="ofic">
+      <div class="map-panel__bg --mob">
+        <img src="img/icons/icons.svg##map-panel-mob" alt="" />
       </div>
-      <div id="map" class="map-contacts__inner"></div>
+      <span class="map-panel__heading">Офис</span>
+      <ul class="map-panel__list">
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">телефон:</span>
+          <a href="tel:+74951550535" class="map-panel__list-txt">+7 (495) 155-05-35</a>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">e-mail:</span>
+          <a href="mailto:info@pamyatnik.ru" class="map-panel__list-txt">info@pamyatnik.ru</a>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">адрес:</span>
+          <span class="map-panel__list-txt">ул. Адмирала Корнилова, 50, стр. 1</span>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">часы работы:</span>
+          <span class="map-panel__list-txt">ежедневно, с 9:00 до 19:00</span>
+        </li>
+      </ul>
+      <div class="map-panel__image-wrap">
+        <picture><source srcset="img/map/map-img.webp" type="image/webp"><img class="map-panel__image" src="img/map/map-img.jpg" alt="" aria-hidden="true" /></picture>
+      </div>
+      <div class="map-panel__icon-wrap --desc">
+        <img class="map-panel__icon" src="img/icons/icons.svg#location-map" alt="" aria-hidden="true" />
+      </div>
+      <button type="button" class="map-panel__btn-close --mob">
+        <img src="img/icons/icons.svg#close" alt="close" title="Закрыть" />
+      </button>
+    </div>
+    <div class="map-panel" data-map-content="main-ofic">
+      <div class="map-panel__bg --mob">
+        <img src="img/icons/icons.svg##map-panel-mob" alt="" />
+      </div>
+      <span class="map-panel__heading">Центральный офис</span>
+      <ul class="map-panel__list">
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">телефон:</span>
+          <a href="tel:+74951550535" class="map-panel__list-txt">+7 (495) 155-05-35</a>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">e-mail:</span>
+          <a href="mailto:info@pamyatnik.ru" class="map-panel__list-txt">info@pamyatnik.ru</a>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">адрес:</span>
+          <span class="map-panel__list-txt">ул. Адмирала Корнилова, 50, стр. 1</span>
+        </li>
+        <li class="map-panel__list-item">
+          <span class="map-panel__list-heading">часы работы:</span>
+          <span class="map-panel__list-txt">ежедневно, с 9:00 до 19:00</span>
+        </li>
+      </ul>
+      <div class="map-panel__image-wrap">
+        <picture><source srcset="img/map/map-img.webp" type="image/webp"><img class="map-panel__image" src="img/map/map-img.jpg" alt="" aria-hidden="true" /></picture>
+      </div>
+      <div class="map-panel__icon-wrap --desc">
+        <img class="map-panel__icon" src="img/icons/icons.svg#location-map" alt="" aria-hidden="true" />
+      </div>
+      <button type="button" class="map-panel__btn-close --mob">
+        <img src="img/icons/icons.svg#close" alt="close" title="Закрыть" />
+      </button>
     </div>
   </div>
 </section>
@@ -612,7 +739,7 @@
 
     </div>
   </body>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ&_v=20231012001617>&lang=ru_RU"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20231012001617"></script>
-  <script src="./js/app.min.js?_v=20231012001617"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231012095428"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20231012095428"></script>
+  <script src="./js/app.min.js?_v=20231012095428"></script>
 </html>
