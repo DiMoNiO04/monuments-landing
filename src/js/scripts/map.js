@@ -1,16 +1,16 @@
 const PLACEMARKS = [
   {
-    lalitude: 55.61592356912356,
-    longitude: 37.44884149999992,
-    attr: 'ofic',
+    lalitude: 55.615924,
+    longitude: 37.448842,
+    attr: 'main-ofic',
     img: './img/icons/ellipse-mark.svg',
   },
-  {
-    lalitude: 55.603482126638916,
-    longitude: 37.451518840271184,
-    attr: 'main-ofic',
-    img: './img/icons/mark.svg',
-  },
+  // {
+  //   lalitude: 55.603482126638916,
+  //   longitude: 37.451518840271184,
+  //   attr: 'main-ofic',
+  //   img: './img/icons/mark.svg',
+  // },
 ];
 
 function removeContent(map) {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const panels = document.querySelectorAll('.map-panel');
 
     const mainMap = new ymaps.Map('map', {
-      center: [55.61592356912356, 37.44884149999992],
+      center: [55.615924, 37.448842],
       zoom: 12,
     });
 

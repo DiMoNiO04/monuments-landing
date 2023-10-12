@@ -1,7 +1,13 @@
 .production {
+  @include showDesc();
   &__text {
     position: relative;
     z-index: 2;
+  }
+
+  &__container {
+    @extend %flexColumn;
+    align-items: center;
   }
 
   &__tit {
@@ -33,6 +39,37 @@
     position: relative;
     background-size: cover;
     padding: 19rem 2.4rem 2.4rem 2.4rem;
+    transition: $transition;
+
+    &:hover {
+      cursor: pointer;
+      background: url('@img/icons/icons.svg#manuf-bg-act');
+      background-size: cover;
+
+      .production__circle {
+        background: $blackLight;
+        transition: $transition;
+
+        img {
+          &:last-child {
+            display: block;
+          }
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+
+      .production__tit,
+      .production__txt {
+        color: $white;
+        transition: $transition;
+      }
+
+      .production__img-active {
+        display: block;
+      }
+    }
   }
 
   &__circle {
@@ -45,8 +82,68 @@
     left: 1rem;
     @extend %flexCenter;
 
+    img {
+      transition: $transition;
+      @include sizes(5rem, 5rem);
+      &:first-child {
+        display: block;
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+
     svg {
       @include sizes(5rem, 5rem);
+    }
+  }
+}
+
+@media screen and (max-width: 48em) {
+  .production {
+    @include showMob();
+
+    &__tit {
+      font-size: 3.6rem;
+    }
+
+    &__slider {
+      width: 100%;
+    }
+
+    &__txt {
+      font-size: 2.8rem;
+      color: $greyLight;
+    }
+
+    &__img-active {
+      @include sizes(24rem, 24rem);
+      position: absolute;
+      bottom: 0;
+      right: 2.4rem;
+    }
+
+    &__wrapper {
+      justify-content: space-between;
+      column-gap: 0;
+    }
+
+    &__slide {
+      @include sizes(68.6rem, 65.6rem);
+      background: url('@img/icons/icons.svg#manuf-bg-mob');
+      background-size: cover;
+      padding: 32.4rem 4.8rem 10.4rem 4.8rem;
+    }
+
+    &__circle {
+      @include sizes(12.8rem, 12.8rem);
+      top: 9rem;
+      left: auto;
+      right: -1rem;
+
+      img {
+        @include sizes(7.2rem, 7.2rem);
+      }
     }
   }
 }

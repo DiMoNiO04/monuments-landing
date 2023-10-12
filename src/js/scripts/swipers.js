@@ -178,6 +178,36 @@ const initMainSwiper = () => {
   });
 };
 
+const initProductionSwiper = () => {
+  if (window.innerWidth < 768) {
+    new Swiper('.production__slider', {
+      modules: [Navigation],
+      speed: 1000,
+      slidesPerView: 1,
+      spaceBetween: 40,
+      observer: true,
+      loop: false,
+      observeParents: true,
+      initialSlide: 0,
+      slideToClickedSlide: true,
+
+      navigation: {
+        prevEl: '.production .swiper__arrows-prev',
+        nextEl: '.production .swiper__arrows-next',
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3,
+          centeredSlides: true,
+          spaceBetween: 90,
+          loop: true,
+        },
+      },
+    });
+  }
+};
+
 const initsSliders = () => {
   initMaterialSlider();
   initGallerySwiper();
@@ -185,6 +215,7 @@ const initsSliders = () => {
   initReviewsSwiper();
   initCatalogSwiper();
   initMainSwiper();
+  initProductionSwiper();
 };
 
 document.addEventListener('DOMContentLoaded', initsSliders);

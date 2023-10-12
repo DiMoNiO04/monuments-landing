@@ -1179,6 +1179,7 @@ template {
 
 .circle__block,
 .main__desc,
+.production__container,
 .application__inputs,
 .contacts__container,
 .catalog__container,
@@ -2487,9 +2488,21 @@ section {
   width: 21rem;
 }
 
+.production .--desc {
+  display: flex;
+}
+
+.production .--mob {
+  display: none;
+}
+
 .production__text {
   position: relative;
   z-index: 2;
+}
+
+.production__container {
+  align-items: center;
 }
 
 .production__tit {
@@ -2522,6 +2535,36 @@ section {
   position: relative;
   background-size: cover;
   padding: 19rem 2.4rem 2.4rem 2.4rem;
+  transition: all 0.4s ease;
+}
+
+.production__slide:hover {
+  cursor: pointer;
+  background: url("@img/icons/icons.svg#manuf-bg-act");
+  background-size: cover;
+}
+
+.production__slide:hover .production__circle {
+  background: #474647;
+  transition: all 0.4s ease;
+}
+
+.production__slide:hover .production__circle img:last-child {
+  display: block;
+}
+
+.production__slide:hover .production__circle img:first-child {
+  display: none;
+}
+
+.production__slide:hover .production__tit,
+.production__slide:hover .production__txt {
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.production__slide:hover .production__img-active {
+  display: block;
 }
 
 .production__circle {
@@ -2533,6 +2576,20 @@ section {
   border: 1px solid #dcdcdc;
   top: 4rem;
   left: 1rem;
+}
+
+.production__circle img {
+  transition: all 0.4s ease;
+  width: 5rem;
+  height: 5rem;
+}
+
+.production__circle img:first-child {
+  display: block;
+}
+
+.production__circle img:last-child {
+  display: none;
 }
 
 .production__circle svg {
@@ -3523,6 +3580,62 @@ section {
     bottom: -5rem;
     right: 6.6rem;
     width: 38rem;
+  }
+
+  .production .--desc {
+    display: none;
+  }
+
+  .production .--mob {
+    display: flex;
+  }
+
+  .production__tit {
+    font-size: 3.6rem;
+  }
+
+  .production__slider {
+    width: 100%;
+  }
+
+  .production__txt {
+    font-size: 2.8rem;
+    color: #7e7e7e;
+  }
+
+  .production__img-active {
+    width: 24rem;
+    height: 24rem;
+    position: absolute;
+    bottom: 0;
+    right: 2.4rem;
+  }
+
+  .production__wrapper {
+    justify-content: space-between;
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+
+  .production__slide {
+    width: 68.6rem;
+    height: 65.6rem;
+    background: url("@img/icons/icons.svg#manuf-bg-mob");
+    background-size: cover;
+    padding: 32.4rem 4.8rem 10.4rem 4.8rem;
+  }
+
+  .production__circle {
+    width: 12.8rem;
+    height: 12.8rem;
+    top: 9rem;
+    left: auto;
+    right: -1rem;
+  }
+
+  .production__circle img {
+    width: 7.2rem;
+    height: 7.2rem;
   }
 
   .main {

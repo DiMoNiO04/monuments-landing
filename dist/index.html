@@ -3,7 +3,7 @@
   <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.min.css?_v=20231012095428" />
+  <link rel="stylesheet" href="./css/style.min.css?_v=20231012105552" />
   <title>Союз каменных мастерских</title>
 </head>
 
@@ -286,9 +286,8 @@
       <div class="swiper-wrapper production__wrapper">
         <div class="swiper-slide production__slide">
           <div class="production__circle">
-            <svg>
-              <use xlink:href="img/icons/icons.svg#manuf-design"></use>
-            </svg>
+            <img src="img/icons/icons.svg#manuf-design-def" />
+            <img src="img/icons/icons.svg#manuf-design-hov" />
           </div>
           <div class="production__text">
             <div class="production__tit">01 / Дизайн и консультация</div>
@@ -297,14 +296,13 @@
             </div>
           </div>
           <div class="production__img-active">
-            <img src="img/icons/icons.svg#manuf-active-design" alt="" />
+            <img src="img/icons/icons.svg#manuf-design-act" alt="" />
           </div>
         </div>
         <div class="swiper-slide production__slide">
           <div class="production__circle">
-            <svg>
-              <use xlink:href="img/icons/icons.svg#manuf-preparation"></use>
-            </svg>
+            <img src="img/icons/icons.svg#manuf-prep-def" />
+            <img src="img/icons/icons.svg#manuf-prep-hov" />
           </div>
           <div class="production__text">
             <div class="production__tit">02 / Подготовка материалов</div>
@@ -313,14 +311,13 @@
             </div>
           </div>
           <div class="production__img-active">
-            <img src="img/icons/icons.svg#manuf-active-preparation" alt="" />
+            <img src="img/icons/icons.svg#manuf-prep-act" alt="" />
           </div>
         </div>
         <div class="swiper-slide production__slide">
           <div class="production__circle">
-            <svg>
-              <use xlink:href="img/icons/icons.svg#manuf-treatment"></use>
-            </svg>
+            <img src="img/icons/icons.svg#manuf-treat-def" />
+            <img src="img/icons/icons.svg#manuf-treat-hov" />
           </div>
           <div class="production__text">
             <div class="production__tit">03 / Обработка, изготовление</div>
@@ -329,14 +326,13 @@
             </div>
           </div>
           <div class="production__img-active">
-            <img src="img/icons/icons.svg#manuf-active-treatment" alt="" />
+            <img src="img/icons/icons.svg#manuf-treat-act" alt="" />
           </div>
         </div>
         <div class="swiper-slide production__slide">
           <div class="production__circle">
-            <svg>
-              <use xlink:href="img/icons/icons.svg#manuf-assembly"></use>
-            </svg>
+            <img src="img/icons/icons.svg#manuf-ass-def" />
+            <img src="img/icons/icons.svg#manuf-ass-hov" />
           </div>
           <div class="production__text">
             <div class="production__tit">04 / Сборка и монтаж</div>
@@ -345,10 +341,22 @@
             </div>
           </div>
           <div class="production__img-active">
-            <img src="img/icons/icons.svg#manuf-active-assembly" alt="" />
+            <img src="img/icons/icons.svg#manuf-ass-act" alt="" />
           </div>
         </div>
       </div>
+    </div>
+    <div class="production__buttons navigation__buttons --mob">
+      <button type="button" class="swiper__arrows-prev">
+        <svg class="btn-arrow arrow-left">
+          <use xlink:href="img/icons/icons.svg#arrow-left"></use>
+        </svg>
+      </button>
+      <button type="button" class="swiper__arrows-next">
+        <svg class="btn-arrow arrow-right">
+          <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
@@ -635,7 +643,7 @@
   <div class="container contacts__container">
     <div class="title">Контакты</div>
     <div class="map" id="map"></div>
-    <div class="map-panel" data-map-content="ofic">
+    <!-- <div class="map-panel" data-map-content="ofic">
       <div class="map-panel__bg --mob">
         <img src="img/icons/icons.svg##map-panel-mob" alt="" />
       </div>
@@ -667,7 +675,7 @@
       <button type="button" class="map-panel__btn-close --mob">
         <img src="img/icons/icons.svg#close" alt="close" title="Закрыть" />
       </button>
-    </div>
+    </div> -->
     <div class="map-panel" data-map-content="main-ofic">
       <div class="map-panel__bg --mob">
         <img src="img/icons/icons.svg##map-panel-mob" alt="" />
@@ -739,7 +747,7 @@
 
     </div>
   </body>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231012095428"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20231012095428"></script>
-  <script src="./js/app.min.js?_v=20231012095428"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=e1d17623-ee55-4c9d-8251-85ab8eb1263e&lang=ru_RU&_v=20231012105552"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20231012105552"></script>
+  <script src="./js/app.min.js?_v=20231012105552"></script>
 </html>
