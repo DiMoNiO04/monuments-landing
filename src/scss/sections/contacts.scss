@@ -199,7 +199,7 @@
     &__btn-close {
       @include sizes(11rem, 11rem);
       position: absolute;
-      right: 0;
+      right: 0.5rem;
       top: -3.4rem;
     }
   }

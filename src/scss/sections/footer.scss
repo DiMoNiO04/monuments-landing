@@ -33,15 +33,11 @@
 
 @media screen and (max-width: 48em) {
   .footer {
-    .container {
-      padding: 0;
-    }
-
     &__container {
       flex-direction: column;
       align-items: center;
       row-gap: 6.4rem;
-      padding: 4.4rem 3.2rem 7rem 3.2rem;
+      padding: 4.4rem 0 7rem 0;
 
       &::before {
         width: 90%;
