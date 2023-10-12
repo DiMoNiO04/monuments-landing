@@ -188,7 +188,7 @@
     }
 
     &__pagination {
-      column-gap: 0.8rem;
+      column-gap: 0.4rem;
       padding-bottom: 0;
 
       span {
@@ -244,6 +244,7 @@
 
     &__desc {
       font-size: 3.6rem;
+      margin-left: -2rem;
     }
 
     &__icon {

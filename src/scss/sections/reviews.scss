@@ -46,7 +46,7 @@
 
   &__slide {
     @extend %flexColumn;
-    @include sizes(40.2rem, 48.5rem);
+    @include sizes(40.2rem, 45.5rem);
     align-items: center;
     padding: 6rem 4rem;
     row-gap: 6rem;
