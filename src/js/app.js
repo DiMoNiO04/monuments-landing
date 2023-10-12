@@ -1,4 +1,5 @@
 import './libs/inputmask.min.js';
+import './libs/gulp.js';
 
 import './scripts/swipers.js';
 import './scripts/header.js';
