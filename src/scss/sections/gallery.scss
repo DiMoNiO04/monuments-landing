@@ -9,7 +9,7 @@
     overflow: visible;
   }
 
-  @media screen and (min-width: 48em) {
+  @media screen and (min-width: 48.1em) {
     &__wrapper {
       margin-left: -7rem;
     }
@@ -19,7 +19,7 @@
     @include sizes(78.4rem, 42rem);
     transition: $transition;
     cursor: pointer;
-    @media screen and (min-width: 48em) {
+    @media screen and (min-width: 48.1em) {
       opacity: 0.5;
     }
 
@@ -29,7 +29,7 @@
       background: #fff;
       margin: 0 7rem 0 0;
       padding: 2rem;
-      @media screen and (min-width: 48em) {
+      @media screen and (min-width: 48.1em) {
         transform: scale(1.1, 1.37);
         opacity: 1;
       }

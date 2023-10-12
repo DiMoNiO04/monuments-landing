@@ -1,160 +1,11 @@
 .contacts {
   margin-bottom: 18rem;
+  padding-top: 20rem;
 
   &__container {
     @extend %flexColumn;
     align-items: center;
     position: relative;
-  }
-}
-
-.map-contacts {
-  // @extend %paddingTop;
-
-  .map-contacts__links::after,
-  .map-contacts__link-wrap::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 50%;
-    bottom: 0;
-    left: 0;
-    background-color: #ffffff;
-  }
-
-  // .map-contacts__container
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-
-    &::before {
-      // @extend %bg;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 195.9rem;
-      height: 98.2rem;
-      background-image: url(@img/bg/03.png);
-      transform: translate(-6%, -19%);
-
-      @media (max-width: 48em) {
-        display: none;
-      }
-    }
-  }
-
-  // .map-contacts__title
-
-  &__title {
-    // @extend %relative;
-    margin-bottom: 5rem;
-    text-align: center;
-
-    @media (max-width: 48em) {
-      margin-bottom: 10.8rem;
-    }
-  }
-
-  // .map-contacts__wrap
-
-  &__wrap {
-    // @extend %relative;
-
-    @media (min-width: 48em) {
-      #map .ymaps-2-1-79-controls__control_toolbar {
-        top: 50%;
-        transform: translateY(50%);
-      }
-    }
-  }
-
-  // .map-contacts__links
-
-  &__links {
-    position: absolute;
-    z-index: 3;
-    top: 0;
-    right: 50%;
-    display: flex;
-    justify-content: space-between;
-    column-gap: 1rem;
-    overflow: hidden;
-    transform: translate(50%, -50%);
-
-    @media (min-width: 48em) {
-      padding: 0.7rem 1.1rem 0.9rem 1.1rem;
-      right: 3.8rem;
-      border-radius: 5rem;
-      transform: translate(0, -50%);
-    }
-
-    @media (max-width: 48em) {
-      &::after {
-        display: none;
-      }
-    }
-  }
-
-  // .map-contacts__link-wrap
-
-  &__link-wrap {
-    &:first-child {
-      .map-contacts__btn {
-        min-width: 24.5rem;
-
-        @media (max-width: 48em) {
-          min-width: 32rem;
-        }
-      }
-    }
-
-    &:last-child {
-      .map-contacts__btn {
-        min-width: 19.9rem;
-
-        @media (max-width: 48em) {
-          min-width: 28rem;
-        }
-      }
-    }
-
-    @media (max-width: 48em) {
-      position: relative;
-      padding: 0.8rem;
-      overflow: hidden;
-      border-radius: 6rem;
-    }
-
-    @media (min-width: 48em) {
-      &::after {
-        display: none;
-      }
-    }
-  }
-
-  // .map-contacts__btn
-
-  &__btn {
-    // @extend %relative;
-    min-height: 5rem;
-
-    @media (max-width: 48em) {
-      min-height: 8rem;
-    }
-  }
-
-  // .map-contacts__inner
-
-  &__inner {
-    display: flex;
-    height: 70rem;
-    border-radius: 2rem;
-
-    @media (max-width: 48em) {
-      height: 140rem;
-      border-radius: 3rem;
-    }
   }
 }
 
@@ -220,6 +71,7 @@
   display: flex;
   flex-direction: column;
   min-height: 43.5rem;
+  width: 42rem;
   border-radius: 2rem;
   color: $black;
   text-transform: uppercase;
@@ -227,17 +79,10 @@
   filter: drop-shadow(1.2rem 2rem 6rem rgba(74, 75, 99, 0.15));
   position: absolute;
   display: flex;
-  opacity: 0;
-  visibility: hidden;
   right: 8rem;
-  top: 28rem;
+  top: 24.4rem;
   z-index: 2;
   transition: $transition;
-
-  &.active {
-    opacity: 1;
-    visibility: visible;
-  }
 
   &__heading {
     margin-bottom: 1.6rem;
@@ -276,9 +121,8 @@
     position: absolute;
     width: 9rem;
     height: 9rem;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
+    top: -3.4rem;
+    left: -3.4rem;
     background-color: $white;
     border-radius: 50%;
     @extend %flexCenter;
@@ -291,6 +135,11 @@
 }
 
 @media screen and (max-width: 48em) {
+  .contacts {
+    margin-bottom: 24rem;
+    padding-top: 23.4rem;
+  }
+
   .map {
     @include sizes(68.6rem, 97.8rem);
   }
@@ -299,13 +148,21 @@
     z-index: 12;
     transform: translateY(-5rem);
     @include showMob();
-    @include sizes(68.6rem, 86rem);
+    @include sizes(68.6rem, 88rem);
     background-color: transparent;
     padding: 10rem 4.8rem 4.8rem 4.8rem;
     right: 3.2rem;
     top: 30%;
     position: fixed;
     transition: $transition;
+
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
 
     &__bg {
       background: url('@img/icons/icons.svg#map-panel-mob') no-repeat center;
@@ -323,7 +180,7 @@
     }
 
     &__list {
-      margin-bottom: 2.8rem;
+      margin-bottom: 5rem;
       row-gap: 1.2rem;
     }
 
@@ -340,10 +197,10 @@
     }
 
     &__btn-close {
-      @include sizes(10.2rem, 10.2rem);
+      @include sizes(11rem, 11rem);
       position: absolute;
-      right: 1rem;
-      top: -3rem;
+      right: 0;
+      top: -3.4rem;
     }
   }
 }

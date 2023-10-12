@@ -5,12 +5,6 @@ const PLACEMARKS = [
     attr: 'main-ofic',
     img: './img/icons/ellipse-mark.svg',
   },
-  // {
-  //   lalitude: 55.603482126638916,
-  //   longitude: 37.451518840271184,
-  //   attr: 'main-ofic',
-  //   img: './img/icons/mark.svg',
-  // },
 ];
 
 function removeContent(map) {
@@ -24,29 +18,10 @@ function removeContent(map) {
   map.controls.remove('rulerControl');
 }
 
-function animationMap(placemark, map) {
-  const options = {
-    flying: true,
-    duration: 1000,
-  };
-
-  map.panTo([placemark[0], placemark[1]], options);
-}
-
-function changeActiveClass(attrEl, attr, el) {
-  if (attrEl === attr) {
-    el.classList.add('active');
-  } else {
-    el.classList.remove('active');
-  }
-}
-
 document.addEventListener('DOMContentLoaded', () => {
   function init() {
-    const panels = document.querySelectorAll('.map-panel');
-
     const mainMap = new ymaps.Map('map', {
-      center: [55.615924, 37.448842],
+      center: [55.595924, 37.458842],
       zoom: 12,
     });
 
@@ -59,55 +34,31 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           hideIconOnBalloonOpen: false,
           iconLayout: 'default#image',
-          iconImageHref: window.innerWidth > 768 ? placemark.img : './img/icons/mark.svg',
-          iconImageize: window.innerWidth > 768 ? [20, 20] : [14, 14],
-          iconImageOffset: window.innerWidth > 768 ? [-10, -10] : [-7, -7],
+          iconImageHref: window.innerWidth > 769 ? placemark.img : './img/icons/ellipse-mark.svg',
+          iconImageSize: window.innerWidth > 769 ? [50, 50] : [40, 40],
+          iconImageOffset: window.innerWidth > 769 ? [-25, -25] : [-20, -20],
         }
       );
 
-      mainMap.geoObjects.add(newPlacemark);
+      if (window.innerWidth < 769) {
+        const panel = document.querySelector('.map-panel');
 
-      newPlacemark.events.add('click', () => {
-        mainMap.geoObjects.each((geoObject) =>
-          geoObject.options.set({
-            iconImageHref: './img/icons/mark.svg',
-            iconImageize: [20, 20],
-            iconImageOffset: [-7, -10],
-          })
-        );
-
-        panels.forEach((panel) => {
-          const attr = panel.getAttribute('data-map-content');
-          changeActiveClass(newPlacemark.properties.get('myDataAttr'), attr, panel);
+        newPlacemark.events.add('click', () => {
+          document.body.classList.add('map-open');
+          panel.classList.add('active');
         });
 
-        animationMap([placemark.lalitude, placemark.longitude], mainMap);
+        const closeBtn = document.querySelector('.map-panel__btn-close');
+        closeBtn.addEventListener('click', () => {
+          document.body.classList.remove('map-open');
+          panel.classList.remove('active');
+        });
+      }
 
-        if (window.innerWidth > 768) {
-          newPlacemark.options.set('iconImageHref', './img/icons/ellipse-mark.svg');
-          newPlacemark.options.set('iconImageize', [50, 50]);
-        }
-
-        if (window.innerWidth < 768) {
-          document.body.classList.add('map-open');
-
-          const closeBtn = document.querySelector('.map-panel.active .map-panel__btn-close');
-          closeBtn.addEventListener('click', () => {
-            document.body.classList.remove('map-open');
-            panels.forEach((panel) => panel.classList.remove('active'));
-          });
-        }
-      });
-
+      mainMap.geoObjects.add(newPlacemark);
       removeContent(mainMap);
     });
   }
 
   ymaps.ready(init);
-
-  const panelMain = document.querySelectorAll('.map-panel');
-
-  if (window.innerWidth > 768) {
-    panelMain[0].classList.add('active');
-  }
 });

@@ -169,6 +169,7 @@
 
     &__desc {
       flex: 0 0 100%;
+      margin-left: -2rem;
     }
 
     &__container {
@@ -177,12 +178,12 @@
 
     &__slider {
       width: 100%;
-      padding: 9rem 0 0;
+      padding: 9.5rem 0 0;
       margin-bottom: 4rem;
     }
 
     &__slide {
-      @include sizes(68.2rem, 55rem);
+      @include sizes(68.2rem, 65rem);
       border-radius: 6rem;
     }
 
@@ -198,11 +199,11 @@
   }
 
   .desc {
-    margin-top: 0;
+    margin: 0;
 
     &__subtitle {
       font-size: 2.8rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.4rem;
     }
 
     &__title {
@@ -258,15 +259,18 @@
   }
 
   .circle {
-    @include sizes(23rem, 23rem);
+    @include sizes(24rem, 22rem);
     top: 0;
     right: 0;
     border: 0;
 
     &__block {
-      @include sizes(23rem, 23rem);
+      @include sizes(23rem, 24rem);
       padding: 6rem 2.2rem;
       border: 0.2rem solid rgba(245, 245, 245, 1);
+      position: relative;
+      justify-content: flex-end;
+      top: 3.4rem;
     }
 
     &__year {

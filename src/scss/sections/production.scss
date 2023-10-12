@@ -1,5 +1,9 @@
 .production {
   @include showDesc();
+  .title {
+    margin-bottom: 1.4rem;
+  }
+
   &__text {
     position: relative;
     z-index: 2;
@@ -41,45 +45,47 @@
     padding: 19rem 2.4rem 2.4rem 2.4rem;
     transition: $transition;
 
-    &:hover {
-      cursor: pointer;
-      background: url('@img/icons/icons.svg#manuf-bg-act');
-      background-size: cover;
+    @media screen and (min-width: 48.1em) {
+      &:hover {
+        cursor: pointer;
+        background: url('@img/icons/icons.svg#manuf-bg-act');
+        background-size: cover;
 
-      .production__circle {
-        background: $blackLight;
-        transition: $transition;
+        .production__circle {
+          background: $blackLight;
+          transition: $transition;
 
-        img {
-          &:last-child {
-            display: block;
-          }
-          &:first-child {
-            display: none;
+          img {
+            &:last-child {
+              display: block;
+            }
+            &:first-child {
+              display: none;
+            }
           }
         }
-      }
 
-      .production__tit,
-      .production__txt {
-        color: $white;
-        transition: $transition;
-      }
+        .production__tit,
+        .production__txt {
+          color: $white;
+          transition: $transition;
+        }
 
-      .production__img-active {
-        display: block;
+        .production__img-active {
+          display: block;
+        }
       }
     }
   }
 
   &__circle {
     position: absolute;
-    @include sizes(7rem, 7rem);
+    @include sizes(9rem, 9rem);
     border-radius: 50%;
     background: transparent;
     border: 1px solid #dcdcdc;
-    top: 4rem;
-    left: 1rem;
+    top: 3rem;
+    left: 0;
     @extend %flexCenter;
 
     img {
@@ -102,6 +108,10 @@
 @media screen and (max-width: 48em) {
   .production {
     @include showMob();
+
+    .title {
+      margin: 0;
+    }
 
     &__tit {
       font-size: 3.6rem;
@@ -129,7 +139,7 @@
     }
 
     &__slide {
-      @include sizes(68.6rem, 65.6rem);
+      @include sizes(68.6rem, 67.6rem);
       background: url('@img/icons/icons.svg#manuf-bg-mob');
       background-size: cover;
       padding: 32.4rem 4.8rem 10.4rem 4.8rem;
@@ -139,7 +149,7 @@
       @include sizes(12.8rem, 12.8rem);
       top: 9rem;
       left: auto;
-      right: -1rem;
+      right: 0;
 
       img {
         @include sizes(7.2rem, 7.2rem);

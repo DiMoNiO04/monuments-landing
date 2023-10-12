@@ -1,4 +1,6 @@
 .application {
+  padding-top: 14.2rem;
+
   &__container {
     position: relative;
   }
@@ -72,6 +74,7 @@
 
 @media screen and (max-width: 48em) {
   .application {
+    padding-top: 23.4rem;
     &__img {
       @include sizes(68.6rem, 68.8rem);
       background-image: url('@img/application/application-mob.jpg');
@@ -89,11 +92,11 @@
     }
 
     .title {
-      margin: 0;
+      margin-bottom: 1.4rem;
     }
 
     &__form {
-      padding: 4rem 4.8rem 12.4rem 20.6rem;
+      padding: 8rem 4.8rem 12.4rem 20rem;
     }
 
     &__text {
@@ -103,7 +106,7 @@
     }
 
     &__inputs {
-      row-gap: 3.4rem;
+      row-gap: 2rem;
       margin-bottom: 8rem;
 
       input {

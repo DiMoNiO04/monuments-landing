@@ -4,6 +4,10 @@
     align-items: center;
   }
 
+  &__slider {
+    overflow: visible;
+  }
+
   &__text {
     @extend %text18;
     color: $greyLight;
@@ -26,6 +30,7 @@
 
   &__img {
     @include sizes(34rem, 34rem);
+    filter: drop-shadow(6rem 12rem 15rem rgba(0, 0, 0, 0.13)) drop-shadow(-9rem -4rem 7rem #fff);
   }
 
   &__txt {
@@ -58,7 +63,7 @@
     }
 
     &__item {
-      row-gap: 4rem;
+      row-gap: 3rem;
     }
 
     &__img {

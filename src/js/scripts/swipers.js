@@ -2,9 +2,10 @@ import Swiper from 'swiper';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 
 let materialsSlider = null;
+let productionSlider = null;
 
 const initMaterialSlider = () => {
-  if (window.matchMedia('(max-width: 768px)').matches && !materialsSlider) {
+  if (window.matchMedia('(max-width: 769px)').matches && !materialsSlider) {
     materialsSlider = new Swiper('.materials__slider', {
       modules: [Autoplay],
       observer: true,
@@ -19,7 +20,7 @@ const initMaterialSlider = () => {
         disableOnInteraction: false,
       },
     });
-  } else if (!window.matchMedia('(max-width: 768px)').matches && materialsSlider) {
+  } else if (!window.matchMedia('(max-width: 769px)').matches && materialsSlider) {
     materialsSlider.destroy();
     materialsSlider = null;
   }
@@ -42,7 +43,7 @@ const initGallerySwiper = () => {
     },
 
     breakpoints: {
-      768: {
+      769: {
         slidesPerView: 2.24,
         centeredSlides: true,
         initialSlide: 4,
@@ -52,12 +53,12 @@ const initGallerySwiper = () => {
 
     on: {
       afterInit: (swiper) => {
-        if (!window.matchMedia('(max-width: 768px)').matches) {
+        if (!window.matchMedia('(max-width: 769px)').matches) {
           swiper.update();
         }
       },
       slideChange: (swiper) => {
-        if (!window.matchMedia('(max-width: 768px)').matches) {
+        if (!window.matchMedia('(max-width: 769px)').matches) {
           swiper.update();
         }
       },
@@ -82,7 +83,7 @@ const initProjectsSwiper = () => {
     },
 
     breakpoints: {
-      768: {
+      769: {
         slidesPerView: 2.24,
         centeredSlides: true,
         initialSlide: 4,
@@ -92,12 +93,12 @@ const initProjectsSwiper = () => {
 
     on: {
       afterInit: (swiper) => {
-        if (!window.matchMedia('(max-width: 768px)').matches) {
+        if (!window.matchMedia('(max-width: 769px)').matches) {
           swiper.update();
         }
       },
       slideChange: (swiper) => {
-        if (!window.matchMedia('(max-width: 768px)').matches) {
+        if (!window.matchMedia('(max-width: 769px)').matches) {
           swiper.update();
         }
       },
@@ -123,10 +124,10 @@ const initReviewsSwiper = () => {
     },
 
     breakpoints: {
-      768: {
+      769: {
         slidesPerView: 3,
         centeredSlides: true,
-        spaceBetween: 90,
+        spaceBetween: 100,
         loop: true,
       },
     },
@@ -151,7 +152,7 @@ const initCatalogSwiper = () => {
     },
 
     breakpoints: {
-      768: {
+      769: {
         slidesPerView: 4,
       },
     },
@@ -179,8 +180,8 @@ const initMainSwiper = () => {
 };
 
 const initProductionSwiper = () => {
-  if (window.innerWidth < 768) {
-    new Swiper('.production__slider', {
+  if (window.matchMedia('(max-width: 769px)').matches && !productionSlider) {
+    productionSlider = new Swiper('.production__slider', {
       modules: [Navigation],
       speed: 1000,
       slidesPerView: 1,
@@ -197,7 +198,7 @@ const initProductionSwiper = () => {
       },
 
       breakpoints: {
-        768: {
+        769: {
           slidesPerView: 3,
           centeredSlides: true,
           spaceBetween: 90,
@@ -205,6 +206,9 @@ const initProductionSwiper = () => {
         },
       },
     });
+  } else if (!window.matchMedia('(max-width: 769px)').matches && productionSlider) {
+    productionSlider.destroy();
+    productionSlider = null;
   }
 };
 

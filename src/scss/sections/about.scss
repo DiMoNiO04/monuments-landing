@@ -84,6 +84,8 @@
 
 @media screen and (max-width: 48em) {
   .about {
+    padding-top: 23.6rem;
+
     &::before {
       @include sizes(90rem, 90rem);
       left: auto;

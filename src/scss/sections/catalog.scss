@@ -99,10 +99,10 @@
     &__btns {
       width: 100%;
       column-gap: 4.8rem;
-      padding: 2.4rem 4.8rem;
-      border-radius: 6rem;
+      padding: 1.4rem 4.8rem 3.4rem 4.8rem;
+      border-radius: 4rem;
       backdrop-filter: blur(4.2rem);
-      margin: 0 3.2rem 8rem 3.2rem;
+      margin: 0 3.2rem 8.5rem 3.2rem;
       overflow: scroll;
       border-width: 0.4rem;
 
@@ -124,6 +124,7 @@
           &:after {
             @include sizes(0.8rem, 0.8rem);
             left: calc(50% - 0.8rem / 2);
+            top: 5.6rem;
           }
         }
       }
@@ -131,16 +132,16 @@
 
     &__slide {
       @include sizes(68.6rem, 62.8rem);
-      border-radius: 6rem;
+      border-radius: 4rem;
       padding: 2.4rem;
     }
 
     &__img {
       @include sizes(64rem, 48rem);
-      border-radius: 6rem;
+      border-radius: none;
 
       img {
-        border-radius: 6rem;
+        border-radius: none;
       }
     }
 
