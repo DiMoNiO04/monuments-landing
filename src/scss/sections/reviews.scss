@@ -8,7 +8,7 @@
 
     &::before {
       content: '';
-      @include sizes(26.8rem, 25.1rem);
+      @include sizes(26.8rem, 28.1rem);
       position: absolute;
       background: url('@img/icons/icons.svg#reviews-lg');
       background-size: cover;

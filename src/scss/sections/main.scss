@@ -143,6 +143,7 @@
     @extend %flexColumn;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(148deg, #fff 19.28%, #f4f4f4 80.61%);
   }
 
   &__year {
