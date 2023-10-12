@@ -3042,7 +3042,7 @@ section {
          column-gap: 8rem;
   }
 
-  .footer__menu .li {
+  .footer__menu li {
     width: 20rem;
     text-align: center;
   }
