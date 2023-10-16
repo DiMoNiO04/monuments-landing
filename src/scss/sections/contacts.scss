@@ -140,7 +140,7 @@
     z-index: 12;
     transform: translateY(-5rem);
     @include showMob();
-    width: 68.6rem;
+    @include sizes(68.6rem, 60rem);
     background-color: transparent;
     padding: 10rem 4.8rem 4.8rem 4.8rem;
     right: 3.2rem;
@@ -157,8 +157,8 @@
     }
 
     &__bg {
-      background: url('@img/icons/icons.svg#map-panel-mob') no-repeat center;
-      @include sizes(68.6rem, 86rem);
+      background: url('@img/icons/icons.svg#map-panel-bg') no-repeat center;
+      @include sizes(68.6rem, 60rem);
       position: absolute;
       z-index: -1;
       background-size: cover;
@@ -191,7 +191,7 @@
     &__btn-close {
       @include sizes(11rem, 11rem);
       position: absolute;
-      right: 0.5rem;
+      right: 0;
       top: -3.4rem;
     }
   }
