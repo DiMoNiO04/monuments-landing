@@ -4,15 +4,15 @@
 
   &::before {
     content: '';
-    @include sizes(51.4rem, 61.4rem);
+    @include sizes(55rem, 60rem);
     position: absolute;
     background: url('@img/icons/icons.svg#about-bg');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: 0.25;
-    left: -2rem;
-    bottom: -3rem;
+    opacity: 0.5;
+    left: 24rem;
+    bottom: -2rem;
   }
 
   &__wrapper {

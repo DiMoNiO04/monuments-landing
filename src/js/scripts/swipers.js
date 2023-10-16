@@ -12,7 +12,7 @@ const initMaterialSlider = () => {
       observeParents: true,
       slidesPerView: 1.65,
       initialSlide: 1,
-      spaceBetween: 40,
+      spaceBetween: 50,
       centeredSlides: true,
       speed: 1000,
       autoplay: {

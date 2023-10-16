@@ -14,6 +14,8 @@
     margin-bottom: 4rem;
     max-width: 90rem;
     text-align: center;
+    position: relative;
+    z-index: 10;
   }
 
   &__items {
@@ -26,6 +28,17 @@
     align-items: center;
     row-gap: 2rem;
     width: 41.7rem;
+    transition: $transition;
+
+    &.swiper-slide-active {
+      transform: scale(1.15);
+    }
+
+    &:nth-child(2) {
+      .materials__img {
+        @include sizes(42rem, 42rem);
+      }
+    }
   }
 
   &__img {
@@ -64,6 +77,11 @@
 
     &__item {
       row-gap: 3rem;
+      &:nth-child(2) {
+        .materials__img {
+          @include sizes(44rem, 44rem);
+        }
+      }
     }
 
     &__img {
