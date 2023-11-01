@@ -28,7 +28,7 @@
   &__img-active {
     @include sizes(24rem, 24rem);
     position: absolute;
-    bottom: 0;
+    bottom: 1.2rem;
     right: 2.4rem;
   }
 
@@ -37,9 +37,19 @@
     column-gap: 3rem;
   }
 
+  &__bg {
+    @include sizes(100%, 100%);
+    position: relative;
+    background-size: cover;
+    transition: $transition;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   &__slide {
     @include sizes(41.7rem, 42rem);
-    background: url('@img/icons/icons.svg#manuf-bg');
     position: relative;
     background-size: cover;
     padding: 19rem 2.4rem 2.4rem 2.4rem;
@@ -47,9 +57,14 @@
 
     @media screen and (min-width: 48.1em) {
       &:hover {
-        cursor: pointer;
-        background: url('@img/icons/icons.svg#manuf-bg-act');
-        background-size: cover;
+        .production__bg {
+          img:first-child {
+            display: none;
+          }
+          img:last-child {
+            display: block;
+          }
+        }
 
         .production__circle {
           background: $blackLight;
@@ -73,6 +88,7 @@
 
         .production__img-active {
           display: block;
+          z-index: 2;
         }
       }
     }
@@ -115,6 +131,10 @@
 
     &__tit {
       font-size: 3.6rem;
+    }
+
+    &__bg {
+      display: none;
     }
 
     &__slider {

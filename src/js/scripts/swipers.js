@@ -1,13 +1,9 @@
-import Swiper from 'swiper';
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
-
 let materialsSlider = null;
 let productionSlider = null;
 
 const initMaterialSlider = () => {
   if (window.matchMedia('(max-width: 769px)').matches && !materialsSlider) {
     materialsSlider = new Swiper('.materials__slider', {
-      modules: [Autoplay],
       observer: true,
       observeParents: true,
       slidesPerView: 1.65,
@@ -28,13 +24,23 @@ const initMaterialSlider = () => {
 
 const initGallerySwiper = () => {
   new Swiper('.gallery__slider', {
-    modules: [Navigation],
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      scale: 0.795,
+      slideShadows: false,
+      centeredSlides: true,
+    },
     speed: 1000,
-    slidesPerView: 1,
     observer: true,
     loop: false,
     observeParents: true,
-    initialSlide: 0,
     slideToClickedSlide: true,
 
     navigation: {
@@ -44,23 +50,7 @@ const initGallerySwiper = () => {
 
     breakpoints: {
       769: {
-        slidesPerView: 2.24,
-        centeredSlides: true,
-        initialSlide: 4,
         loop: true,
-      },
-    },
-
-    on: {
-      afterInit: (swiper) => {
-        if (!window.matchMedia('(max-width: 769px)').matches) {
-          swiper.update();
-        }
-      },
-      slideChange: (swiper) => {
-        if (!window.matchMedia('(max-width: 769px)').matches) {
-          swiper.update();
-        }
       },
     },
   });
@@ -68,13 +58,23 @@ const initGallerySwiper = () => {
 
 const initProjectsSwiper = () => {
   new Swiper('.projects__slider', {
-    modules: [Navigation],
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      scale: 0.735,
+      slideShadows: false,
+      centeredSlides: true,
+    },
     speed: 1000,
-    slidesPerView: 1,
     observer: true,
     loop: false,
     observeParents: true,
-    initialSlide: 0,
     slideToClickedSlide: true,
 
     navigation: {
@@ -84,23 +84,7 @@ const initProjectsSwiper = () => {
 
     breakpoints: {
       769: {
-        slidesPerView: 2.24,
-        centeredSlides: true,
-        initialSlide: 4,
         loop: true,
-      },
-    },
-
-    on: {
-      afterInit: (swiper) => {
-        if (!window.matchMedia('(max-width: 769px)').matches) {
-          swiper.update();
-        }
-      },
-      slideChange: (swiper) => {
-        if (!window.matchMedia('(max-width: 769px)').matches) {
-          swiper.update();
-        }
       },
     },
   });
@@ -108,15 +92,25 @@ const initProjectsSwiper = () => {
 
 const initReviewsSwiper = () => {
   new Swiper('.reviews__slider', {
-    modules: [Navigation],
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      scale: 0.975,
+      slideShadows: false,
+      centeredSlides: true,
+    },
     speed: 1000,
-    slidesPerView: 1,
-    spaceBetween: 40,
     observer: true,
     loop: false,
     observeParents: true,
-    initialSlide: 0,
     slideToClickedSlide: true,
+    spaceBetween: 110,
 
     navigation: {
       prevEl: '.reviews .swiper__arrows-prev',
@@ -125,9 +119,6 @@ const initReviewsSwiper = () => {
 
     breakpoints: {
       769: {
-        slidesPerView: 3,
-        centeredSlides: true,
-        spaceBetween: 100,
         loop: true,
       },
     },
@@ -136,14 +127,12 @@ const initReviewsSwiper = () => {
 
 const initCatalogSwiper = () => {
   new Swiper('.catalog__slider', {
-    modules: [Navigation],
     speed: 1000,
     slidesPerView: 1,
     spaceBetween: 30,
     observer: true,
     loop: false,
     observeParents: true,
-    initialSlide: 0,
     slideToClickedSlide: true,
 
     navigation: {
@@ -161,7 +150,6 @@ const initCatalogSwiper = () => {
 
 const initMainSwiper = () => {
   new Swiper('.main__slider', {
-    modules: [Pagination, Autoplay],
     slidesPerView: 1,
     spaceBetween: 30,
     observer: true,
@@ -182,10 +170,9 @@ const initMainSwiper = () => {
 const initProductionSwiper = () => {
   if (window.matchMedia('(max-width: 769px)').matches && !productionSlider) {
     productionSlider = new Swiper('.production__slider', {
-      modules: [Navigation],
       speed: 1000,
       slidesPerView: 1,
-      spaceBetween: 40,
+      spaceBetween: 30,
       observer: true,
       loop: false,
       observeParents: true,

@@ -19,10 +19,6 @@
     }
   }
 
-  &__slider {
-    margin-top: 3rem;
-  }
-
   .swiper {
     overflow: visible;
   }
@@ -30,10 +26,12 @@
   &__name {
     @extend %text23;
     color: $blackDark;
+    font-size: 2.6rem;
   }
 
   &__text {
-    @extend %text15;
+    @extend %text18;
+    font-size: 1.7rem;
     color: $blackDark;
     position: relative;
     overflow: auto;
@@ -46,10 +44,10 @@
 
   &__slide {
     @extend %flexColumn;
-    @include sizes(40.2rem, 45.5rem);
+    @include sizes(45rem, 51rem);
     align-items: center;
-    padding: 6rem 4rem;
-    row-gap: 6rem;
+    padding: 7rem 5rem;
+    row-gap: 7rem;
     border-radius: 2.7rem;
     border: 0.17rem solid rgba(245, 245, 245, 1);
     background: linear-gradient(0deg, #fff 0%, #fff 100%), linear-gradient(165deg, #f8f8f8 1.32%, #f4f4f4 103.54%);
@@ -64,7 +62,7 @@
     &::before,
     &::after {
       content: '';
-      @include sizes(4.3rem, 4.9rem);
+      @include sizes(4.5rem, 4.9rem);
       position: absolute;
       background: url('@img/icons/icons.svg#reviews-sm');
       background-size: cover;
@@ -73,31 +71,33 @@
 
     &::before {
       left: 3rem;
-      top: 12rem;
+      top: 14rem;
     }
 
     &::after {
       transform: rotate(180deg);
       right: 4rem;
-      bottom: 4rem;
+      bottom: 8rem;
+      @include sizes(5.5rem, 5.9rem);
     }
 
     @media screen and (min-width: 48.1em) {
       &.swiper-slide-active {
-        transform: scale(1.12, 1.12);
         border-radius: 3rem;
         border-width: 2px;
-        row-gap: 5.8rem;
-        padding: 5.4rem 5.2rem 6.8rem 5rem;
+        row-gap: 6.8rem;
+        padding: 6.4rem 5.2rem 6.8rem 5rem;
 
         &::before {
-          left: 4rem;
-          top: 11.5rem;
+          left: 3.8rem;
+          top: 13.5rem;
+          @include sizes(4.5rem, 4.9rem);
         }
 
         &::after {
-          right: 5rem;
-          bottom: 5.4rem;
+          right: 4.8rem;
+          bottom: 6.4rem;
+          @include sizes(4.5rem, 4.9rem);
         }
 
         .reviews__name {
@@ -105,7 +105,7 @@
         }
 
         .reviews__text {
-          font-size: 1.6rem;
+          font-size: 1.8rem;
 
           &::before,
           &::after {
@@ -144,7 +144,7 @@
     padding-top: 5rem;
 
     .title {
-      margin-bottom: 5.5rem;
+      margin-bottom: 8rem;
     }
 
     &__container {
@@ -166,8 +166,8 @@
     }
 
     &__slide {
-      height: 76rem;
-      padding: 10.4rem 6rem;
+      @include sizes(100%, 76rem);
+      padding: 9.4rem 6rem;
       row-gap: 8rem;
       border-radius: 6rem;
       border: 0.4rem solid rgba(245, 245, 245, 1);
@@ -179,12 +179,12 @@
 
       &::before {
         left: 4rem;
-        top: 10rem;
+        top: 17rem;
       }
 
       &::after {
         right: 6rem;
-        bottom: 4rem;
+        bottom: 14rem;
       }
     }
 

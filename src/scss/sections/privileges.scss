@@ -168,6 +168,10 @@
   .privileges {
     @include showMob();
 
+    .title {
+      margin-bottom: 10rem;
+    }
+
     &__container {
       align-items: flex-start;
     }
@@ -176,7 +180,7 @@
       height: 100%;
       width: 100%;
       flex-direction: column;
-      row-gap: 3.2rem;
+      row-gap: 3rem;
     }
 
     &__item {

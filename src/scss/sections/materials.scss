@@ -15,7 +15,7 @@
     max-width: 90rem;
     text-align: center;
     position: relative;
-    z-index: 10;
+    z-index: 8;
   }
 
   &__items {
@@ -43,7 +43,13 @@
 
   &__img {
     @include sizes(34rem, 34rem);
-    filter: drop-shadow(6rem 12rem 15rem rgba(0, 0, 0, 0.13)) drop-shadow(-9rem -4rem 7rem #fff);
+    // box-shadow: ;
+    // filter: drop-shadow(6rem 12rem 15rem rgba(0, 0, 0, 0.13)) drop-shadow(-9rem -4rem 7rem #fff);
+    // will-change: filter;
+    border-radius: 50%;
+    box-shadow:
+      12rem 14rem 14rem rgba(0, 0, 0, 0.07),
+      -4rem -4rem 6rem #fff;
   }
 
   &__txt {
@@ -86,6 +92,13 @@
 
     &__img {
       @include sizes(44rem, 44rem);
+
+      img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 10;
+      }
     }
 
     &__txt {

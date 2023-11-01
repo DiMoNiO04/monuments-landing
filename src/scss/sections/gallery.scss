@@ -1,6 +1,6 @@
 .gallery {
   .title {
-    margin: 0 auto 12.4rem auto;
+    margin: 0 auto 4rem auto;
     display: block;
     width: fit-content;
   }
@@ -9,14 +9,8 @@
     overflow: visible;
   }
 
-  @media screen and (min-width: 48.1em) {
-    &__wrapper {
-      margin-left: -7rem;
-    }
-  }
-
   &__slide {
-    @include sizes(78.4rem, 42rem);
+    @include sizes(86.4rem, 57.4rem);
     transition: $transition;
     cursor: pointer;
     @media screen and (min-width: 48.1em) {
@@ -27,10 +21,8 @@
       border-radius: 3rem;
       border: 1px solid #e7e5e5;
       background: #fff;
-      margin: 0 7rem 0 0;
       padding: 2rem;
       @media screen and (min-width: 48.1em) {
-        transform: scale(1.1, 1.37);
         opacity: 1;
       }
 
@@ -38,14 +30,6 @@
         width: 100%;
         height: 100%;
       }
-    }
-
-    &:nth-child(1) {
-      margin-left: 0;
-    }
-
-    &.swiper-slide-prev {
-      margin: 0 7rem 0 0;
     }
   }
 
@@ -58,7 +42,7 @@
   }
 
   &__buttons {
-    margin-top: 10.7rem;
+    margin-top: 4rem;
   }
 }
 
@@ -77,11 +61,11 @@
     }
 
     &__slide {
-      height: 44rem;
+      @include sizes(68.6rem, 44rem);
       padding: 2.4rem;
-      &.swiper-slide-prev {
-        margin: 0;
-      }
+      border-radius: 4rem;
+      border: 1px solid #e7e5e5;
+      background: #fff;
     }
   }
 }

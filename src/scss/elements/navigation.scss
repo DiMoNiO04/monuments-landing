@@ -8,11 +8,22 @@
     button {
       @include sizes(6rem, 6rem);
       @extend %flexCenter;
-      background: $blackLight;
+      background: #f6f6f6;
       border-radius: 50%;
 
+      @media screen and (min-width: 48em) {
+        &:not(:disabled):hover {
+          transition: $transition;
+          background: $blackLight;
+
+          svg {
+            fill: $white;
+          }
+        }
+      }
+
       svg {
-        fill: $white;
+        fill: $blackLight;
       }
 
       &.swiper-button-disabled {
@@ -32,9 +43,11 @@
       column-gap: 2.4rem;
 
       button {
+        background: $blackLight;
         @include sizes(8.8rem, 8.8rem);
 
         svg {
+          fill: $white;
           @include sizes(3.5rem, 3.5rem);
         }
       }
