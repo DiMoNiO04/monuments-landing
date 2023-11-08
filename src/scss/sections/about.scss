@@ -2,19 +2,6 @@
   position: relative;
   padding-top: 14.6rem;
 
-  &::before {
-    content: '';
-    @include sizes(58rem, 62rem);
-    position: absolute;
-    background: url('@img/icons/icons.svg#about-bg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 0.1;
-    left: 21rem;
-    bottom: -4rem;
-  }
-
   &__wrapper {
     @extend %flexCenterBetween;
     column-gap: 17rem;
@@ -24,6 +11,20 @@
     @extend %flexColumn;
     align-items: center;
     width: 166.5rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      @include sizes(58rem, 62rem);
+      position: absolute;
+      background: url('@img/icons/icons.svg#about-bg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+      opacity: 0.1;
+      left: 8rem;
+      bottom: -4rem;
+    }
   }
 
   &__desc {
@@ -86,17 +87,17 @@
   .about {
     padding-top: 23.6rem;
 
-    &::before {
-      @include sizes(85rem, 90rem);
-      left: auto;
-      bottom: auto;
-      right: 3.2rem;
-      top: 56rem;
-    }
-
     &__container {
       align-items: flex-start;
       width: 100%;
+
+      &::before {
+        @include sizes(85rem, 90rem);
+        left: auto;
+        bottom: auto;
+        right: 4.6rem;
+        top: 32rem;
+      }
     }
 
     &__wrapper {

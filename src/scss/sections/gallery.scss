@@ -5,10 +5,6 @@
     width: fit-content;
   }
 
-  .swiper {
-    overflow: visible;
-  }
-
   &__slide {
     @include sizes(86.4rem, 57.4rem);
     transition: $transition;

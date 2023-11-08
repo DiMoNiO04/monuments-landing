@@ -13,7 +13,7 @@
       background: url('@img/icons/icons.svg#reviews-lg');
       background-size: cover;
       background-repeat: no-repeat;
-      z-index: -1;
+      z-index: 1;
       left: 4rem;
       top: -7rem;
     }
@@ -30,12 +30,14 @@
   }
 
   &__text {
-    @extend %text18;
+    @extend %text20;
     font-size: 1.7rem;
+    line-height: 160%;
     color: $blackDark;
     position: relative;
     overflow: auto;
-    max-height: 21rem;
+    max-height: 23.2rem;
+    transition: $transition;
 
     &::-webkit-scrollbar {
       display: none;
@@ -67,6 +69,7 @@
       background: url('@img/icons/icons.svg#reviews-sm');
       background-size: cover;
       background-repeat: no-repeat;
+      transition: $transition;
     }
 
     &::before {
@@ -86,7 +89,7 @@
         border-radius: 3rem;
         border-width: 2px;
         row-gap: 6.8rem;
-        padding: 6.4rem 5.2rem 6.8rem 5rem;
+        padding: 6.4rem 5rem 6.8rem 5rem;
 
         &::before {
           left: 3.8rem;
@@ -162,7 +165,8 @@
 
     &__text {
       max-height: 40rem;
-      font-size: 2.6rem;
+      font-size: 2.8rem;
+      line-height: 154%;
     }
 
     &__slide {
